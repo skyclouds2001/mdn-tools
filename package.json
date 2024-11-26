@@ -1,0 +1,10 @@
+{
+  "name": "mdn-tools",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@mdn/browser-compat-data": "^5.6.18",
+    "mdn-data": "^2.12.2"
+  }
+}
