@@ -233,53 +233,13 @@ for (const [key, value] of Object.entries(l10n_data)) {
   }
 }
 
-fs.writeFileSync('./results/mismatch_status.md', `
-# Mismatch status
-
-| feature | actual | expected |
-| :---: | :---: | :---: |
-${mismatch_status.filter(feature => !mismatch_statuses.includes(feature)).map(({ data, actual, expected }) => `| \`${data}\` | ${actual} | ${expected} |`).join('\n')}
-`.trimStart())
-
 fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.filter(feature => !mismatch_statuses.includes(feature)).map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
-
-fs.writeFileSync('./results/not_in_bcd.md', `
-# Not in BCD
-
-| feature |
-| :---: |
-${not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => `| ${feature} |`).join('\n')}
-`.trimStart())
 
 fs.writeFileSync('./results/not_in_bcd.json', JSON.stringify(Object.fromEntries(not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => ([feature, '']))), null, 2))
 
-fs.writeFileSync('./results/missing_mdn_url.md', `
-# Missing MDN URL
-
-| feature |
-| :---: |
-${missing_mdn_url.filter(feature => !missing_mdn_urls.includes(feature)).map(feature => `| ${feature} |`).join('\n')}
-`.trimStart())
-
 fs.writeFileSync('./results/missing_mdn_url.json', JSON.stringify(Object.fromEntries(missing_mdn_url.filter(feature => !missing_mdn_urls.includes(feature)).map(feature => ([feature, '']))), null, 2))
 
-fs.writeFileSync('./results/mismatch_mdn_url.md', `
-# Mismatch MDN URL
-
-| feature |
-| :---: |
-${mismatch_mdn_url.filter(feature => !mismatch_mdn_urls.includes(feature)).map(feature => `| ${feature} |`).join('\n')}
-`.trimStart())
-
 fs.writeFileSync('./results/mismatch_mdn_url.json', JSON.stringify(Object.fromEntries(mismatch_mdn_url.filter(feature => !mismatch_mdn_urls.includes(feature)).map(feature => ([feature, '']))), null, 2))
-
-fs.writeFileSync('./results/missing_l10n.md', `
-# Missing l10n
-
-| feature |
-| :---: |
-${missing_l10n.map(feature => `| ${feature} |`).join('\n')}
-`.trimStart())
 
 fs.writeFileSync('./results/missing_l10n.json', JSON.stringify(Object.fromEntries(missing_l10n.map(feature => ([feature, '']))), null, 2))
 
