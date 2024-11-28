@@ -140,7 +140,7 @@ for (const func in function_data) {
     function_bcd['transform-function'][func.replace(/\(\)$/, '')] != null ||
     function_bcd['color'][func.replace(/\(\)$/, '')] != null ||
     function_bcd['image'][func.replace(/\(\)$/, '')] != null ||
-    function_bcd['image']['gradient'][func.replace(/\(\)$/, '')] != null ||
+    function_bcd['gradient'][func.replace(/\(\)$/, '')] != null ||
     bcd['css']['properties']['animation-timeline'][func.replace(/\(\)$/, '')] != null ||
     bcd['css']['properties']['grid-template-columns'][func.replace(/\(\)$/, '')] != null ||
     bcd['css']['properties']['custom-property'][func.replace(/\(\)$/, '')] != null
@@ -152,7 +152,7 @@ for (const func in function_data) {
       function_bcd['transform-function'][func.replace(/\(\)$/, '')] ??
       function_bcd['color'][func.replace(/\(\)$/, '')] ??
       function_bcd['image'][func.replace(/\(\)$/, '')] ??
-      function_bcd['image']['gradient'][func.replace(/\(\)$/, '')] ??
+      function_bcd['gradient'][func.replace(/\(\)$/, '')] ??
       bcd['css']['properties']['animation-timeline'][func.replace(/\(\)$/, '')] ??
       bcd['css']['properties']['grid-template-columns'][func.replace(/\(\)$/, '')] ??
       bcd['css']['properties']['custom-property'][func.replace(/\(\)$/, '')],
