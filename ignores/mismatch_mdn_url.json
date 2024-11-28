@@ -1,0 +1,19 @@
+{
+  "-moz-appearance": "alias for appearance",
+  "-webkit-appearance": "alias for appearance",
+  "-webkit-mask": "alias for mask",
+  "-webkit-mask-clip": "alias for mask-clip",
+  "-webkit-mask-image": "alias for mask-image",
+  "-webkit-mask-origin": "alias for mask-origin",
+  "-webkit-mask-position": "alias for mask-position",
+  "-webkit-mask-repeat": "alias for mask-repeat",
+  "-webkit-mask-size": "alias for mask-size",
+  "grid-column-gap": "alias for column-gap",
+  "grid-gap": "alias for gap",
+  "grid-row-gap": "alias for row-gap",
+  "word-wrap": "alias for overflow-wrap",
+  "color": "url changed to color_value",
+  "flex": "url changed to flex_value",
+  "overflow": "url changed to overflow_value",
+  "position": "url changed to position_value"
+}

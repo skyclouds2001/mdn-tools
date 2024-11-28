@@ -3,6 +3,11 @@ import fs from 'node:fs'
 import bcd from '@mdn/browser-compat-data' with { type: 'json' }
 import data from 'mdn-data'
 
+import mismatch_status_ignores from './ignores/mismatch_status.json' with { type: 'json' }
+import not_in_bcd_ignores from './ignores/not_in_bcd.json' with { type: 'json' }
+import missing_mdn_url_ignores from './ignores/missing_mdn_url.json' with { type: 'json' }
+import mismatch_mdn_url_ignores from './ignores/mismatch_mdn_url.json' with { type: 'json' }
+
 const at_rule_data = data['css']['atRules']
 const at_rule_bcd = bcd['css']['at-rules']
 const function_data = data['css']['functions']
@@ -17,9 +22,14 @@ const unit_data = data['css']['units']
 const unit_bcd = bcd['css']['types']
 
 const mismatch_status = []
-const data_not_in_bcd = []
+const not_in_bcd = []
 const missing_mdn_url = []
 const mismatch_mdn_url = []
+
+const mismatch_statuses = Object.keys(mismatch_status_ignores)
+const not_in_bcds = Object.keys(not_in_bcd_ignores)
+const missing_mdn_urls = Object.keys(missing_mdn_url_ignores)
+const mismatch_mdn_urls = Object.keys(mismatch_mdn_url_ignores)
 
 for (const at_rule in at_rule_data) {
   if (at_rule_data[at_rule]['mdn_url'] == null) {
@@ -61,12 +71,12 @@ for (const at_rule in at_rule_data) {
             })
           }
         } else {
-          data_not_in_bcd.push(`${at_rule}/${descriptor}`)
+          not_in_bcd.push(`${at_rule}/${descriptor}`)
         }
       }
     }
   } else {
-    data_not_in_bcd.push(at_rule)
+    not_in_bcd.push(at_rule)
   }
 }
 
@@ -88,14 +98,14 @@ for (const property in property_data) {
       })
     }
   } else {
-    data_not_in_bcd.push(property)
+    not_in_bcd.push(property)
   }
 }
 
 for (const selector in selector_data) {
   if (selector_data[selector]['mdn_url'] == null) {
     missing_mdn_url.push(selector)
-  } else if (selector_data[selector]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${selector}`) {
+  } else if (selector_data[selector]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${selector.replaceAll(' ', '_')}`) {
     mismatch_mdn_url.push(selector)
   }
 
@@ -110,7 +120,7 @@ for (const selector in selector_data) {
       })
     }
   } else {
-    data_not_in_bcd.push(selector)
+    not_in_bcd.push(selector)
   }
 }
 
@@ -157,7 +167,7 @@ for (const func in function_data) {
       })
     }
   } else {
-    data_not_in_bcd.push(func)
+    not_in_bcd.push(func)
   }
 }
 
@@ -179,7 +189,7 @@ for (const type in type_data) {
       })
     }
   } else {
-    data_not_in_bcd.push(type)
+    not_in_bcd.push(type)
   }
 }
 
@@ -211,40 +221,40 @@ for (const unit in unit_data) {
       })
     }
   } else {
-    data_not_in_bcd.push(unit)
+    not_in_bcd.push(unit)
   }
 }
 
-fs.writeFileSync('./logs/mismatch_status.md', `
+fs.writeFileSync('./results/mismatch_status.md', `
 # Mismatch status
 
 | feature | actual | expected |
 | :---: | :---: | :---: |
-${mismatch_status.map(({ data, actual, expected }) => `| \`${data}\` | ${actual} | ${expected} |`).join('\n')}
+${mismatch_status.filter(feature => !mismatch_statuses.includes(feature)).map(({ data, actual, expected }) => `| \`${data}\` | ${actual} | ${expected} |`).join('\n')}
 `.trimStart())
 
-fs.writeFileSync('./logs/not_in_bcd.md', `
+fs.writeFileSync('./results/not_in_bcd.md', `
 # Not in BCD
 
 | feature |
 | :---: |
-${data_not_in_bcd.map(feature => `| ${feature} |`).join('\n')}
+${not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => `| ${feature} |`).join('\n')}
 `.trimStart())
 
-fs.writeFileSync('./logs/missing_mdn_url.md', `
+fs.writeFileSync('./results/missing_mdn_url.md', `
 # Missing MDN URL
 
 | feature |
 | :---: |
-${missing_mdn_url.map(feature => `| ${feature} |`).join('\n')}
+${missing_mdn_url.filter(feature => !missing_mdn_urls.includes(feature)).map(feature => `| ${feature} |`).join('\n')}
 `.trimStart())
 
-fs.writeFileSync('./logs/mismatch_mdn_url.md', `
+fs.writeFileSync('./results/mismatch_mdn_url.md', `
 # Mismatch MDN URL
 
 | feature |
 | :---: |
-${mismatch_mdn_url.map(feature => `| ${feature} |`).join('\n')}
+${mismatch_mdn_url.filter(feature => !mismatch_mdn_urls.includes(feature)).map(feature => `| ${feature} |`).join('\n')}
 `.trimStart())
 
 
