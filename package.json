@@ -3,6 +3,10 @@
   "license": "MIT",
   "private": true,
   "type": "module",
+  "scripts": {
+    "init": "node ./init.js",
+    "collect": "node ./mdn-data-css-check.js"
+  },
   "dependencies": {
     "@mdn/browser-compat-data": "^5.6.20",
     "mdn-data": "^2.12.2"
