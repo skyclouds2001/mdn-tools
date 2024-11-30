@@ -1,15 +1,53 @@
 {
-  "-moz-appearance": "alias for appearance",
-  "-webkit-appearance": "alias for appearance",
-  "-webkit-mask": "alias for mask",
-  "-webkit-mask-clip": "alias for mask-clip",
-  "-webkit-mask-image": "alias for mask-image",
-  "-webkit-mask-origin": "alias for mask-origin",
-  "-webkit-mask-position": "alias for mask-position",
-  "-webkit-mask-repeat": "alias for mask-repeat",
-  "-webkit-mask-size": "alias for mask-size",
-  "grid-column-gap": "alias for column-gap",
-  "grid-gap": "alias for gap",
-  "grid-row-gap": "alias for row-gap",
-  "word-wrap": "alias for overflow-wrap"
+  "--*": {
+    "rewrite": "css.properties.custom-property"
+  },
+  "-moz-appearance": {
+    "alias": "appearance"
+  },
+  "-moz-user-modify": {
+    "alias": "user-modify"
+  },
+  "-webkit-appearance": {
+    "alias": "appearance"
+  },
+  "-webkit-line-clamp": {
+    "alias": "line-clamp"
+  },
+  "-webkit-mask": {
+    "alias": "mask"
+  },
+  "-webkit-mask-clip": {
+    "alias": "mask-clip"
+  },
+  "-webkit-mask-image": {
+    "alias": "mask-image"
+  },
+  "-webkit-mask-origin": {
+    "alias": "mask-origin"
+  },
+  "-webkit-mask-position": {
+    "alias": "mask-position"
+  },
+  "-webkit-mask-repeat": {
+    "alias": "mask-repeat"
+  },
+  "-webkit-mask-size": {
+    "alias": "mask-size"
+  },
+  "-webkit-user-modify": {
+    "alias": "user-modify"
+  },
+  "grid-column-gap": {
+    "alias": "column-gap"
+  },
+  "grid-gap": {
+    "alias": "gap"
+  },
+  "grid-row-gap": {
+    "alias": "row-gap"
+  },
+  "word-wrap": {
+    "alias": "overflow-wrap"
+  }
 }
