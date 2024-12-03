@@ -2,9 +2,5 @@
   "name": "mdn-tools",
   "license": "MIT",
   "private": true,
-  "type": "module",
-  "scripts": {
-    "init": "node ./init.js",
-    "collect": "node ./css-check.js"
-  }
+  "type": "module"
 }
