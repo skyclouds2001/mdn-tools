@@ -1,0 +1,49 @@
+{
+  "missing_function": {
+    "not_in_syntax": [
+      "anchor()",
+      "anchor-size()",
+      "fit-content()",
+      "oklab()",
+      "oklch()"
+    ],
+    "not_in_function": [
+      "abs()",
+      "acos()",
+      "asin()",
+      "atan()",
+      "atan2()",
+      "cos()",
+      "exp()",
+      "hwb()",
+      "hypot()",
+      "lab()",
+      "layer()",
+      "lch()",
+      "light-dark()",
+      "log()",
+      "mod()",
+      "pow()",
+      "rem()",
+      "repeating-conic-gradient()",
+      "round()",
+      "sign()",
+      "sin()",
+      "sqrt()",
+      "tan()"
+    ],
+    "mismatch_between_function_and_syntax": [
+      "counter()",
+      "counters()",
+      "linear-gradient()",
+      "minmax()",
+      "perspective()",
+      "scale()",
+      "scale3d()",
+      "scaleX()",
+      "scaleY()",
+      "scaleZ()",
+      "scroll()"
+    ]
+  }
+}

@@ -21,12 +21,14 @@ const type_bcd = bcd['css']['types']
 const unit_data = data['css']['units']
 const unit_bcd = bcd['css']['types']
 const l10n_data = data['l10n']['css']
+const syntax_data = data['css']['syntaxes']
 
 const mismatch_status = []
 const not_in_bcd = []
 const missing_mdn_url = []
 const mismatch_mdn_url = []
 const missing_l10n = []
+const missing_function = Object.freeze({ not_in_syntax: [], not_in_function: [], mismatch_between_function_and_syntax: [] })
 
 const mismatch_statuses = Object.keys(mismatch_status_ignores)
 const not_in_bcds = Object.keys(not_in_bcd_ignores)
@@ -233,6 +235,25 @@ for (const [key, value] of Object.entries(l10n_data)) {
   }
 }
 
+const functions = Object.keys(function_data)
+const syntaxes = Object.keys(syntax_data)
+
+for (const func in function_data) {
+  if (!syntaxes.includes(func)) {
+    missing_function.not_in_syntax.push(func)
+  } else {
+    if (function_data[func]['syntax'] !== syntax_data[func]['syntax']) {
+      missing_function.mismatch_between_function_and_syntax.push(func)
+    }
+  }
+}
+
+for (const syntax in syntax_data) {
+  if (syntax.endsWith('()') && !functions.includes(syntax)) {
+    missing_function.not_in_function.push(syntax)
+  }
+}
+
 fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.filter(feature => !mismatch_statuses.includes(feature)).map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
 
 fs.writeFileSync('./results/not_in_bcd.json', JSON.stringify(Object.fromEntries(not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => ([feature, '']))), null, 2))
@@ -243,6 +264,7 @@ fs.writeFileSync('./results/mismatch_mdn_url.json', JSON.stringify(Object.fromEn
 
 fs.writeFileSync('./results/missing_l10n.json', JSON.stringify(Object.fromEntries(missing_l10n.map(feature => ([feature, '']))), null, 2))
 
+fs.writeFileSync('./results/missing_function.json', JSON.stringify({ missing_function }, null, 2))
 
 function compare_status(bcd, data) {
   const status = bcd['__compat']['status']
