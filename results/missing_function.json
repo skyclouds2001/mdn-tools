@@ -5,7 +5,8 @@
       "anchor-size()",
       "fit-content()",
       "oklab()",
-      "oklch()"
+      "oklch()",
+      "palette-mix()"
     ],
     "not_in_function": [
       "abs()",
