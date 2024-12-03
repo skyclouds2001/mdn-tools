@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "init": "node ./init.js",
-    "collect": "node ./mdn-data-css-check.js"
+    "collect": "node ./css-check.js"
   },
   "dependencies": {
     "@mdn/browser-compat-data": "^5.6.20",
