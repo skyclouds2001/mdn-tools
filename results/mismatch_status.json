@@ -1,44 +1,4 @@
 {
-  "@font-face/ascent-override": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@font-face/descent-override": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@font-face/font-display": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@font-face/line-gap-override": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@font-face/size-adjust": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@property": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@property/syntax": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@property/inherits": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@property/initial-value": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
-  "@starting-style": {
-    "actual": "experimental",
-    "expected": "standard"
-  },
   "position-area": {
     "actual": "experimental",
     "expected": "standard"

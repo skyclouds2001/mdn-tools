@@ -34,17 +34,12 @@
       "tan()"
     ],
     "mismatch_between_function_and_syntax": [
-      "counter()",
-      "counters()",
       "linear-gradient()",
-      "minmax()",
-      "perspective()",
       "scale()",
       "scale3d()",
       "scaleX()",
       "scaleY()",
-      "scaleZ()",
-      "scroll()"
+      "scaleZ()"
     ]
   }
 }
