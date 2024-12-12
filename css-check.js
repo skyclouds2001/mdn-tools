@@ -57,12 +57,11 @@ for (const at_rule in at_rule_data) {
       const descriptors = at_rule_data[at_rule]['descriptors']
 
       for (const descriptor in descriptors) {
-        // todo: mdn_url check not enabled with CSS at-rule descriptors
-        // if (at_rule_data[at_rule]['descriptors'][descriptor]['mdn_url'] == null) {
-        //   missing_mdn_url.push(at_rule)
-        // } else if (at_rule_data[at_rule]['descriptors'][descriptor]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${at_rule}/${descriptor}`) {
-        //   mismatch_mdn_url.push(`${at_rule}/${descriptor}`)
-        // }
+        if (at_rule_data[at_rule]['descriptors'][descriptor]['mdn_url'] == null) {
+          missing_mdn_url.push(`${at_rule}/${descriptor}`)
+        } else if (at_rule_data[at_rule]['descriptors'][descriptor]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${at_rule}/${descriptor}`) {
+          mismatch_mdn_url.push(`${at_rule}/${descriptor}`)
+        }
 
         if (at_rule_bcd[at_rule.replace(/^@/, '')][descriptor] != null) {
           const { result, actual, expected } = compare_status(at_rule_bcd[at_rule.replace(/^@/, '')][descriptor], at_rule_data[at_rule]['descriptors'][descriptor])

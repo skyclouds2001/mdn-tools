@@ -1,4 +1,6 @@
 {
+  "@page/bleed": "",
+  "@page/marks": "",
   "-webkit-border-before-color": "",
   "-webkit-border-before-style": "",
   "-webkit-border-before-width": "",
