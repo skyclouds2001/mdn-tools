@@ -8,6 +8,8 @@ import not_in_bcd_ignores from './ignores/not_in_bcd.json' with { type: 'json' }
 import missing_mdn_url_ignores from './ignores/missing_mdn_url.json' with { type: 'json' }
 import mismatch_mdn_url_ignores from './ignores/mismatch_mdn_url.json' with { type: 'json' }
 
+import './css-unordered-check.js'
+
 const at_rule_data = data['css']['atRules']
 const at_rule_bcd = bcd['css']['at-rules']
 const function_data = data['css']['functions']
