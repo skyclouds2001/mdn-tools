@@ -3,9 +3,7 @@ import fs from 'node:fs'
 import bcd from './@mdn/browser-compat-data/build/data.json' with { type: 'json' }
 import data from './mdn-data/index.js'
 
-import mismatch_status_ignores from './ignores/mismatch_status.json' with { type: 'json' }
 import not_in_bcd_ignores from './ignores/not_in_bcd.json' with { type: 'json' }
-import missing_mdn_url_ignores from './ignores/missing_mdn_url.json' with { type: 'json' }
 import mismatch_mdn_url_ignores from './ignores/mismatch_mdn_url.json' with { type: 'json' }
 
 import './css-unordered-check.js'
@@ -32,9 +30,7 @@ const mismatch_mdn_url = []
 const missing_l10n = []
 const missing_function = Object.freeze({ not_in_syntax: [], not_in_function: [], mismatch_between_function_and_syntax: [] })
 
-const mismatch_statuses = Object.keys(mismatch_status_ignores)
 const not_in_bcds = Object.keys(not_in_bcd_ignores)
-const missing_mdn_urls = Object.keys(missing_mdn_url_ignores)
 const mismatch_mdn_urls = Object.keys(mismatch_mdn_url_ignores)
 
 for (const at_rule in at_rule_data) {
@@ -255,11 +251,11 @@ for (const syntax in syntax_data) {
   }
 }
 
-fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.filter(feature => !mismatch_statuses.includes(feature)).map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
+fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
 
 fs.writeFileSync('./results/not_in_bcd.json', JSON.stringify(Object.fromEntries(not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => ([feature, '']))), null, 2))
 
-fs.writeFileSync('./results/missing_mdn_url.json', JSON.stringify(Object.fromEntries(missing_mdn_url.filter(feature => !missing_mdn_urls.includes(feature)).map(feature => ([feature, '']))), null, 2))
+fs.writeFileSync('./results/missing_mdn_url.json', JSON.stringify(Object.fromEntries(missing_mdn_url.map(feature => ([feature, '']))), null, 2))
 
 fs.writeFileSync('./results/mismatch_mdn_url.json', JSON.stringify(Object.fromEntries(mismatch_mdn_url.filter(feature => !mismatch_mdn_urls.includes(feature)).map(feature => ([feature, '']))), null, 2))
 
