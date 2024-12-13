@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 
 import bcd from './@mdn/browser-compat-data/build/data.json' with { type: 'json' }
-import data from './mdn-data/index.js'
+import data from './@mdn/data/index.js'
 
 import not_in_bcd_ignores from './ignores/not_in_bcd.json' with { type: 'json' }
 import mismatch_mdn_url_ignores from './ignores/mismatch_mdn_url.json' with { type: 'json' }

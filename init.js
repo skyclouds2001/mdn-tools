@@ -31,16 +31,34 @@ if (fs.existsSync(path.resolve(root, '@mdn/browser-compat-data'))) {
   })
 }
 
-if (fs.existsSync(path.resolve(root, 'mdn-data'))) {
+if (fs.existsSync(path.resolve(root, '@mdn/data'))) {
   child_process.exec('git pull', {
-    cwd: path.resolve(root, 'mdn-data'),
+    cwd: path.resolve(root, '@mdn/data'),
   }, (error) => {
     if (error != null) {
       console.log(error)
     }
   })
 } else {
-  child_process.exec('git clone https://github.com/mdn/data.git ./mdn-data', {
+  child_process.exec('git clone https://github.com/mdn/data.git ./@mdn/data', {
+    cwd: root,
+  }, (error) => {
+    if (error != null) {
+      console.log(error)
+    }
+  })
+}
+
+if (fs.existsSync(path.resolve(root, '@mdn/content'))) {
+  child_process.exec('git pull', {
+    cwd: path.resolve(root, '@mdn/content'),
+  }, (error) => {
+    if (error != null) {
+      console.log(error)
+    }
+  })
+} else {
+  child_process.exec('git clone https://github.com/mdn/content.git ./@mdn/content', {
     cwd: root,
   }, (error) => {
     if (error != null) {
