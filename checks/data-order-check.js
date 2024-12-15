@@ -104,4 +104,9 @@ for (const [l10n] of Object.entries(l10n_data)) {
   previous_l10n = l10n
 }
 
-fs.writeFileSync(path.resolve(root, 'results/unordered_data.json'), JSON.stringify({ unordered_data: Object.fromEntries(unordered_data) }, null, 2))
+fs.writeFileSync(
+  path.resolve(root, 'results/unordered_data.json'),
+  JSON.stringify({
+    unordered_data: Object.fromEntries(unordered_data),
+  }, null, 2),
+)
