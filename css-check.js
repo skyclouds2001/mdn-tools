@@ -6,7 +6,7 @@ import data from './@mdn/data/index.js'
 import not_in_bcd_ignores from './ignores/not_in_bcd.json' with { type: 'json' }
 import mismatch_mdn_url_ignores from './ignores/mismatch_mdn_url.json' with { type: 'json' }
 
-import './css-key-order-check.js'
+import './checks/data-order-check.js'
 
 const at_rule_data = data['css']['atRules']
 const at_rule_bcd = bcd['css']['at-rules']

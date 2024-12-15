@@ -1,0 +1,9 @@
+{
+  "--*": "-ms-accelerator",
+  "Type selectors": "Class selectors",
+  "Universal selectors": "Attribute selectors",
+  "Selector list": "Adjacent sibling combinator",
+  "General sibling combinator": "Child combinator",
+  "Descendant combinator": "Column combinator",
+  "Pseudo-elements": ":active"
+}
