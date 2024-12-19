@@ -4,11 +4,11 @@ import bcd from './@mdn/browser-compat-data/build/data.json' with { type: 'json'
 import data from './@mdn/data/index.js'
 
 import not_in_bcd_ignores from './ignores/not_in_bcd.json' with { type: 'json' }
-import mismatch_mdn_url_ignores from './ignores/mismatch_mdn_url.json' with { type: 'json' }
 
 import './checks/data-order-check.js'
 import './checks/function-consistent-check.js'
 import './checks/l10n-check.js'
+import './checks/mdn_url-check.js'
 
 const at_rule_data = data['css']['atRules']
 const at_rule_bcd = bcd['css']['at-rules']
@@ -25,19 +25,10 @@ const unit_bcd = bcd['css']['types']
 
 const mismatch_status = []
 const not_in_bcd = []
-const missing_mdn_url = []
-const mismatch_mdn_url = []
 
 const not_in_bcds = Object.keys(not_in_bcd_ignores)
-const mismatch_mdn_urls = Object.keys(mismatch_mdn_url_ignores)
 
 for (const at_rule in at_rule_data) {
-  if (at_rule_data[at_rule]['mdn_url'] == null) {
-    missing_mdn_url.push(at_rule)
-  } else if (at_rule_data[at_rule]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${at_rule}`) {
-    mismatch_mdn_url.push(at_rule)
-  }
-
   if (at_rule_bcd[at_rule.replace(/^@/, '')] != null) {
     const { result, actual, expected } = compare_status(at_rule_bcd[at_rule.replace(/^@/, '')], at_rule_data[at_rule])
 
@@ -53,12 +44,6 @@ for (const at_rule in at_rule_data) {
       const descriptors = at_rule_data[at_rule]['descriptors']
 
       for (const descriptor in descriptors) {
-        if (at_rule_data[at_rule]['descriptors'][descriptor]['mdn_url'] == null) {
-          missing_mdn_url.push(`${at_rule}/${descriptor}`)
-        } else if (at_rule_data[at_rule]['descriptors'][descriptor]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${at_rule}/${descriptor}`) {
-          mismatch_mdn_url.push(`${at_rule}/${descriptor}`)
-        }
-
         if (at_rule_bcd[at_rule.replace(/^@/, '')][descriptor] != null) {
           const { result, actual, expected } = compare_status(at_rule_bcd[at_rule.replace(/^@/, '')][descriptor], at_rule_data[at_rule]['descriptors'][descriptor])
 
@@ -80,12 +65,6 @@ for (const at_rule in at_rule_data) {
 }
 
 for (const property in property_data) {
-  if (property_data[property]['mdn_url'] == null) {
-    missing_mdn_url.push(property)
-  } else if (property_data[property]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${property}`) {
-    mismatch_mdn_url.push(property)
-  }
-
   if (property_bcd[property] != null) {
     const { result, actual, expected } = compare_status(property_bcd[property], property_data[property])
 
@@ -102,12 +81,6 @@ for (const property in property_data) {
 }
 
 for (const selector in selector_data) {
-  if (selector_data[selector]['mdn_url'] == null) {
-    missing_mdn_url.push(selector)
-  } else if (selector_data[selector]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${selector.replaceAll(' ', '_')}`) {
-    mismatch_mdn_url.push(selector)
-  }
-
   if (selector_bcd[selector.replace(/^::?/, '').replace(/\(\)$/, '')] != null) {
     const { result, actual, expected } = compare_status(selector_bcd[selector.replace(/^::?/, '').replace(/\(\)$/, '')], selector_data[selector])
 
@@ -124,14 +97,6 @@ for (const selector in selector_data) {
 }
 
 for (const func in function_data) {
-  if (function_data[func]['mdn_url'] == null) {
-    missing_mdn_url.push(func)
-  }
-  // todo: mdn_url check not enabled with CSS functions
-  // else if (function_data[func]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${func}`) {
-  //   mismatch_mdn_url.push(func)
-  // }
-
   if (
     function_bcd[func.replace(/\(\)$/, '')] != null ||
     function_bcd['basic-shape'][func.replace(/\(\)$/, '')] != null ||
@@ -171,12 +136,6 @@ for (const func in function_data) {
 }
 
 for (const type in type_data) {
-  if (type_data[type]['mdn_url'] == null) {
-    missing_mdn_url.push(type)
-  } else if (type_data[type]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${type}`) {
-    mismatch_mdn_url.push(type)
-  }
-
   if (type_bcd[type] != null || type_bcd['image'][type] != null) {
     const { result, actual, expected } = compare_status(type_bcd[type] ?? type_bcd['image'][type], type_data[type])
 
@@ -193,13 +152,6 @@ for (const type in type_data) {
 }
 
 for (const unit in unit_data) {
-  // todo: mdn_url check not enabled with CSS units
-  // if (unit_data[unit]['mdn_url'] == null) {
-  //   missing_mdn_url.push(unit)
-  // } else if (unit_data[unit]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${unit}`) {
-  //   mismatch_mdn_url.push(unit)
-  // }
-
   if (
     unit_bcd['length'][unit] != null ||
     unit_bcd['resolution'][unit] != null ||
@@ -227,10 +179,6 @@ for (const unit in unit_data) {
 fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
 
 fs.writeFileSync('./results/not_in_bcd.json', JSON.stringify(Object.fromEntries(not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => ([feature, '']))), null, 2))
-
-fs.writeFileSync('./results/missing_mdn_url.json', JSON.stringify(Object.fromEntries(missing_mdn_url.map(feature => ([feature, '']))), null, 2))
-
-fs.writeFileSync('./results/mismatch_mdn_url.json', JSON.stringify(Object.fromEntries(mismatch_mdn_url.filter(feature => !mismatch_mdn_urls.includes(feature)).map(feature => ([feature, '']))), null, 2))
 
 function compare_status(bcd, data) {
   const status = bcd['__compat']['status']
