@@ -20,6 +20,7 @@ const type_data = data['css']['types']
 
 const missing_mdn_url = new Set()
 const mismatch_mdn_url = new Set()
+const missing_mdn_content = new Set()
 
 for (const at_rule in at_rule_data) {
   if (at_rule_data[at_rule]['mdn_url'] == null) {
@@ -27,6 +28,9 @@ for (const at_rule in at_rule_data) {
   } else {
     if (at_rule_data[at_rule]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${at_rule}`) {
       mismatch_mdn_url.add(at_rule)
+    }
+    if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', at_rule.toLowerCase()))) {
+      missing_mdn_content.add(at_rule)
     }
   }
 
@@ -40,6 +44,9 @@ for (const at_rule in at_rule_data) {
         if (at_rule_data[at_rule]['descriptors'][at_rule_descriptor]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${at_rule}/${at_rule_descriptor}`) {
           mismatch_mdn_url.add(`${at_rule}/${at_rule_descriptor}`)
         }
+        if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', at_rule.toLowerCase(), at_rule_descriptor.toLowerCase()))) {
+          missing_mdn_content.add(`${at_rule}/${at_rule_descriptor}`)
+        }
       }
     }
   }
@@ -52,6 +59,9 @@ for (const func in function_data) {
     if (function_data[func]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${func}`) {
       mismatch_mdn_url.add(func)
     }
+    if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', func.replaceAll('()', '').toLowerCase()))) {
+      missing_mdn_content.add(func)
+    }
   }
 }
 
@@ -61,6 +71,9 @@ for (const property in property_data) {
   } else {
     if (property_data[property]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${property}`) {
       mismatch_mdn_url.add(property)
+    }
+    if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', property.toLowerCase()))) {
+      missing_mdn_content.add(property)
     }
   }
 }
@@ -72,6 +85,9 @@ for (const selector in selector_data) {
     if (selector_data[selector]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${selector.replaceAll(' ', '_')}`) {
       mismatch_mdn_url.add(selector)
     }
+    if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', selector.replaceAll('::', '_doublecolon_').replaceAll(':', '_colon_').toLowerCase()))) {
+      missing_mdn_content.add(selector)
+    }
   }
 }
 
@@ -82,6 +98,9 @@ for (const type in type_data) {
     if (type_data[type]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${type}`) {
       mismatch_mdn_url.add(type)
     }
+    if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', type.toLowerCase()))) {
+      missing_mdn_content.add(type)
+    }
   }
 }
 
@@ -91,6 +110,7 @@ fs.writeFileSync(
     incorrect_mdn_url: {
       missing_mdn_url: Array.from(missing_mdn_url),
       mismatch_mdn_url: Array.from(mismatch_mdn_url),
+      missing_mdn_content: Array.from(missing_mdn_content),
     },
   }, null, 2),
 )
