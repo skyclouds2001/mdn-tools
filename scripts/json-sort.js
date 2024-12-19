@@ -1,7 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
-import { compare } from './utils'
+
+import { compare } from '../utils/index.js'
 
 const base = process.cwd()
 

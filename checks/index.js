@@ -1,14 +1,14 @@
 import fs from 'node:fs'
 
-import bcd from './@mdn/browser-compat-data/build/data.json' with { type: 'json' }
-import data from './@mdn/data/index.js'
+import bcd from '../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
+import data from '../@mdn/data/index.js'
 
-import not_in_bcd_ignores from './ignores/not_in_bcd.json' with { type: 'json' }
+import not_in_bcd_ignores from '../ignores/not_in_bcd.json' with { type: 'json' }
 
-import './checks/data-order-check.js'
-import './checks/function-consistent-check.js'
-import './checks/l10n-check.js'
-import './checks/mdn_url-check.js'
+import './data-order-check.js'
+import './function-consistent-check.js'
+import './l10n-check.js'
+import './mdn_url-check.js'
 
 const at_rule_data = data['css']['atRules']
 const at_rule_bcd = bcd['css']['at-rules']

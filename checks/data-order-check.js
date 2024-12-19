@@ -11,7 +11,7 @@ import process from 'node:process'
 
 import data from '../@mdn/data/index.js'
 
-import { compare } from '../utils.js'
+import { compare } from '../utils/index.js'
 
 import ignores from '../ignores/unordered_data.json' with { type: 'json' }
 
