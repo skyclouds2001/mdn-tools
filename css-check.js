@@ -8,6 +8,7 @@ import mismatch_mdn_url_ignores from './ignores/mismatch_mdn_url.json' with { ty
 
 import './checks/data-order-check.js'
 import './checks/function-consistent-check.js'
+import './checks/l10n-check.js'
 
 const at_rule_data = data['css']['atRules']
 const at_rule_bcd = bcd['css']['at-rules']
@@ -21,13 +22,11 @@ const type_data = data['css']['types']
 const type_bcd = bcd['css']['types']
 const unit_data = data['css']['units']
 const unit_bcd = bcd['css']['types']
-const l10n_data = data['l10n']['css']
 
 const mismatch_status = []
 const not_in_bcd = []
 const missing_mdn_url = []
 const mismatch_mdn_url = []
-const missing_l10n = []
 
 const not_in_bcds = Object.keys(not_in_bcd_ignores)
 const mismatch_mdn_urls = Object.keys(mismatch_mdn_url_ignores)
@@ -225,12 +224,6 @@ for (const unit in unit_data) {
   }
 }
 
-for (const [key, value] of Object.entries(l10n_data)) {
-  if (!Object.keys(value).includes('zh-CN')) {
-    missing_l10n.push(key)
-  }
-}
-
 fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
 
 fs.writeFileSync('./results/not_in_bcd.json', JSON.stringify(Object.fromEntries(not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => ([feature, '']))), null, 2))
@@ -238,8 +231,6 @@ fs.writeFileSync('./results/not_in_bcd.json', JSON.stringify(Object.fromEntries(
 fs.writeFileSync('./results/missing_mdn_url.json', JSON.stringify(Object.fromEntries(missing_mdn_url.map(feature => ([feature, '']))), null, 2))
 
 fs.writeFileSync('./results/mismatch_mdn_url.json', JSON.stringify(Object.fromEntries(mismatch_mdn_url.filter(feature => !mismatch_mdn_urls.includes(feature)).map(feature => ([feature, '']))), null, 2))
-
-fs.writeFileSync('./results/missing_l10n.json', JSON.stringify(Object.fromEntries(missing_l10n.map(feature => ([feature, '']))), null, 2))
 
 function compare_status(bcd, data) {
   const status = bcd['__compat']['status']
