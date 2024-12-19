@@ -109,6 +109,7 @@
   "::-ms-value": "",
   "::-webkit-progress-inner-value": "",
   "::cue-region": "",
+  "layer()": "",
   "leader()": "",
   "palette-mix()": "",
   "target-counter()": "",

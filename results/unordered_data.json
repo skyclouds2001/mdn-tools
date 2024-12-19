@@ -1,6 +1,8 @@
 {
   "unordered_data": {
     "@font-face/font-variation-settings": "@font-face/font-stretch",
-    "@property/syntax": "@property/inherits"
+    "@property/syntax": "@property/inherits",
+    "hypot()": "hwb()",
+    "target-text()": "tan()"
   }
 }

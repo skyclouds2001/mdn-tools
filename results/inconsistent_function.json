@@ -1,45 +1,9 @@
 {
   "inconsistent_function": {
-    "not_in_syntax": [
-      "anchor()",
-      "anchor-size()",
-      "fit-content()",
-      "oklab()",
-      "oklch()",
-      "palette-mix()"
-    ],
-    "not_in_function": [
-      "abs()",
-      "acos()",
-      "asin()",
-      "atan()",
-      "atan2()",
-      "cos()",
-      "exp()",
-      "hwb()",
-      "hypot()",
-      "lab()",
-      "layer()",
-      "lch()",
-      "light-dark()",
-      "log()",
-      "mod()",
-      "pow()",
-      "rem()",
-      "repeating-conic-gradient()",
-      "round()",
-      "sign()",
-      "sin()",
-      "sqrt()",
-      "tan()"
-    ],
+    "not_in_syntax": [],
+    "not_in_function": [],
     "mismatch_syntax_between_function_and_syntax": [
-      "linear-gradient()",
-      "scale()",
-      "scale3d()",
-      "scaleX()",
-      "scaleY()",
-      "scaleZ()"
+      "linear-gradient()"
     ]
   }
 }
