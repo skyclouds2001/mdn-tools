@@ -1,14 +1,15 @@
+// @ts-check
+
 import fs from 'node:fs'
 
 import bcd from '../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
 import data from '../@mdn/data/index.js'
 
-import not_in_bcd_ignores from '../ignores/not_in_bcd.json' with { type: 'json' }
-
 import './data-order-check.js'
 import './function-consistent-check.js'
 import './l10n-check.js'
 import './mdn_url-check.js'
+import './bcd-data-consistent-check.js'
 
 const at_rule_data = data['css']['atRules']
 const at_rule_bcd = bcd['css']['at-rules']
@@ -24,9 +25,6 @@ const unit_data = data['css']['units']
 const unit_bcd = bcd['css']['types']
 
 const mismatch_status = []
-const not_in_bcd = []
-
-const not_in_bcds = Object.keys(not_in_bcd_ignores)
 
 for (const at_rule in at_rule_data) {
   if (at_rule_bcd[at_rule.replace(/^@/, '')] != null) {
@@ -39,28 +37,24 @@ for (const at_rule in at_rule_data) {
         expected,
       })
     }
+  }
 
-    if (at_rule_data[at_rule]['descriptors'] != null) {
-      const descriptors = at_rule_data[at_rule]['descriptors']
+  if (at_rule_data[at_rule]['descriptors'] != null) {
+    const descriptors = at_rule_data[at_rule]['descriptors']
 
-      for (const descriptor in descriptors) {
-        if (at_rule_bcd[at_rule.replace(/^@/, '')][descriptor] != null) {
-          const { result, actual, expected } = compare_status(at_rule_bcd[at_rule.replace(/^@/, '')][descriptor], at_rule_data[at_rule]['descriptors'][descriptor])
+    for (const descriptor in descriptors) {
+      if (at_rule_bcd[at_rule.replace(/^@/, '')][descriptor] != null) {
+        const { result, actual, expected } = compare_status(at_rule_bcd[at_rule.replace(/^@/, '')][descriptor], at_rule_data[at_rule]['descriptors'][descriptor])
 
-          if (!result) {
-            mismatch_status.push({
-              data: `${at_rule}/${descriptor}`,
-              actual,
-              expected,
-            })
-          }
-        } else {
-          not_in_bcd.push(`${at_rule}/${descriptor}`)
+        if (!result) {
+          mismatch_status.push({
+            data: `${at_rule}/${descriptor}`,
+            actual,
+            expected,
+          })
         }
       }
     }
-  } else {
-    not_in_bcd.push(at_rule)
   }
 }
 
@@ -75,8 +69,6 @@ for (const property in property_data) {
         expected,
       })
     }
-  } else {
-    not_in_bcd.push(property)
   }
 }
 
@@ -91,8 +83,6 @@ for (const selector in selector_data) {
         expected,
       })
     }
-  } else {
-    not_in_bcd.push(selector)
   }
 }
 
@@ -130,8 +120,6 @@ for (const func in function_data) {
         expected,
       })
     }
-  } else {
-    not_in_bcd.push(func)
   }
 }
 
@@ -146,8 +134,6 @@ for (const type in type_data) {
         expected,
       })
     }
-  } else {
-    not_in_bcd.push(type)
   }
 }
 
@@ -171,14 +157,10 @@ for (const unit in unit_data) {
         expected,
       })
     }
-  } else {
-    not_in_bcd.push(unit)
   }
 }
 
 fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
-
-fs.writeFileSync('./results/not_in_bcd.json', JSON.stringify(Object.fromEntries(not_in_bcd.filter(feature => !not_in_bcds.includes(feature)).map(feature => ([feature, '']))), null, 2))
 
 function compare_status(bcd, data) {
   const status = bcd['__compat']['status']
