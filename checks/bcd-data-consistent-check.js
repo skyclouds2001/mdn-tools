@@ -27,6 +27,7 @@ const unit_data = data['css']['units']
 const unit_bcd = bcd['css']['types']
 
 const missing_in_bcd = new Set()
+const missing_in_data = new Set()
 
 for (const at_rule in at_rule_data) {
   if (at_rule_bcd[at_rule.replace(/^@/, '')] == null) {
@@ -89,11 +90,39 @@ for (const unit in unit_data) {
   }
 }
 
+for (const at_rule in at_rule_bcd) {
+  if (at_rule_data['@' + at_rule] == null) {
+    missing_in_data.add('@' + at_rule)
+    continue
+  }
+
+  // css at-rule descriptor - check manually
+}
+
+for (const property in property_bcd) {
+  if (property_data[property] == null) {
+    missing_in_data.add(property)
+  }
+}
+
+for (const selector in selector_bcd) {
+  if (selector_data[selector] == null) {
+    missing_in_data.add(selector)
+  }
+}
+
+for (const type in type_bcd) {
+  if (type_data[type] == null) {
+    missing_in_data.add(type)
+  }
+}
+
 fs.writeFileSync(
   path.resolve(root, 'results/inconsistent_bcd_data.json'),
   JSON.stringify({
     inconsistent_bcd_data: {
       'missing_in_bcd': Array.from(missing_in_bcd),
+      'missing_in_data': Array.from(missing_in_data),
     },
   }, null, 2),
 )
