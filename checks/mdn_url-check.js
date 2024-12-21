@@ -56,7 +56,7 @@ for (const func in function_data) {
   if (function_data[func]['mdn_url'] == null) {
     missing_mdn_url.add(func)
   } else {
-    if (function_data[func]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${func}`) {
+    if (function_data[func]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${func.replaceAll('()', '')}`) {
       mismatch_mdn_url.add(func)
     }
     if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', function_data[func]['mdn_url'].replaceAll('https://developer.mozilla.org/docs/Web/CSS/', '')))) {
