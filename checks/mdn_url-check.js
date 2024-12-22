@@ -74,7 +74,7 @@ for (const property in property_data) {
     if (property_data[property]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${redirects['properties'][property] ?? property}`) {
       mismatch_mdn_url.add(property)
     }
-    if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', property_data[property]['mdn_url'].replaceAll('https://developer.mozilla.org/docs/Web/CSS/', '')))) {
+    if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', property_data[property]['mdn_url'].replaceAll('https://developer.mozilla.org/docs/Web/CSS/', '').replaceAll('*', '_star_')))) {
       missing_mdn_content.add(property)
     }
   }
