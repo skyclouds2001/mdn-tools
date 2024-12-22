@@ -1,5 +1,5 @@
 /**
- * this check ensures that every feature should have a correct mdn_url key
+ * this check ensures that every feature should have a correct mdn_url key and the mdn_url key must be matched with the feature, also, the mdn content referenced by the feature must be existed
  *
  * results will be produced in ../results/incorrect_mdn_url.json
  */
