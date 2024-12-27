@@ -17,3 +17,5 @@ Track features that are in spec but not added in [mdn/data](https://github.com/m
   * https://drafts.csswg.org/css-text-4/#propdef-white-space-collapse
 * `balance-all` value for `column-fill` property
   * https://drafts.csswg.org/css-multicol/#propdef-column-fill
+* `trim-all` `trim-both` `auto` value for `text-spacing-trim` property
+  * https://drafts.csswg.org/css-text-4/#propdef-text-spacing-trim
