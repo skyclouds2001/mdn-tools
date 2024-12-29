@@ -11,6 +11,8 @@ import process from 'node:process'
 import bcd from '../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
 import data from '../@mdn/data/index.js'
 
+import bcd_data_redirect from '../data/bcd-data-redirect.json' with { type: 'json' }
+
 const root = process.cwd()
 
 const at_rule_data = data['css']['atRules']
@@ -91,6 +93,10 @@ for (const unit in unit_data) {
 }
 
 for (const at_rule in at_rule_bcd) {
+  if (bcd_data_redirect['at-rules'][at_rule] != null && at_rule_data[bcd_data_redirect['at-rules'][at_rule]] != null) {
+    continue
+  }
+
   if (at_rule_data['@' + at_rule] != null) {
     continue
   }
@@ -99,6 +105,10 @@ for (const at_rule in at_rule_bcd) {
 }
 
 for (const property in property_bcd) {
+  if (bcd_data_redirect['properties'][property] != null && property_data[bcd_data_redirect['properties'][property]] != null) {
+    continue
+  }
+
   if (property_data[property] != null) {
     continue
   }
@@ -107,6 +117,10 @@ for (const property in property_bcd) {
 }
 
 for (const selector in selector_bcd) {
+  if (bcd_data_redirect['selectors'][selector] != null && selector_data[bcd_data_redirect['selectors'][selector]] != null) {
+    continue
+  }
+
   if (selector_data[selector] != null) {
     continue
   }
@@ -123,6 +137,10 @@ for (const selector in selector_bcd) {
 }
 
 for (const type in type_bcd) {
+  if (bcd_data_redirect['types'][type] != null && type_data[bcd_data_redirect['types'][type]] != null) {
+    continue
+  }
+
   if (type_data[type] != null) {
     continue
   }

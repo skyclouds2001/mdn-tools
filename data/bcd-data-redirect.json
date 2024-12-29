@@ -1,0 +1,20 @@
+{
+  "at-rules": {},
+  "properties": {
+    "custom-property": "--*"
+  },
+  "selectors": {
+    "attribute": "Attribute selectors",
+    "child": "Child combinator",
+    "class": "Class selectors",
+    "descendant": "Descendant combinator",
+    "hostfunction": ":host()",
+    "id": "ID selectors",
+    "list": "Selector list",
+    "next-sibling": "Next-sibling combinator",
+    "subsequent-sibling": "Subsequent-sibling combinator",
+    "type": "Type selectors",
+    "universal": "Universal selectors"
+  },
+  "types": {}
+}
