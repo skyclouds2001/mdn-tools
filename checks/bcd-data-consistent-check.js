@@ -91,30 +91,43 @@ for (const unit in unit_data) {
 }
 
 for (const at_rule in at_rule_bcd) {
-  if (at_rule_data['@' + at_rule] == null) {
-    missing_in_data.add('@' + at_rule)
+  if (at_rule_data['@' + at_rule] != null) {
     continue
   }
 
-  // css at-rule descriptor - check manually
+  missing_in_data.add('@' + at_rule)
 }
 
 for (const property in property_bcd) {
-  if (property_data[property] == null) {
-    missing_in_data.add(property)
+  if (property_data[property] != null) {
+    continue
   }
+
+  missing_in_data.add(property)
 }
 
 for (const selector in selector_bcd) {
-  if (selector_data[selector_bcd[selector]['__compat']['description'].replace('<code>', '').replace('</code>', '')] == null) {
-    missing_in_data.add(selector_bcd[selector]['__compat']['description'].replace('<code>', '').replace('</code>', ''))
+  if (selector_data[selector] != null) {
+    continue
   }
+
+  if (selector_data['::' + selector] != null) {
+    continue
+  }
+
+  if (selector_data[':' + selector] != null) {
+    continue
+  }
+
+  missing_in_data.add(selector_bcd[selector]['__compat']['description'].replace('<code>', '').replace('</code>', ''))
 }
 
 for (const type in type_bcd) {
-  if (type_data[type] == null) {
-    missing_in_data.add(type)
+  if (type_data[type] != null) {
+    continue
   }
+
+  missing_in_data.add(type)
 }
 
 fs.writeFileSync(
