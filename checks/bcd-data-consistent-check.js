@@ -106,8 +106,8 @@ for (const property in property_bcd) {
 }
 
 for (const selector in selector_bcd) {
-  if (selector_data[selector] == null) {
-    missing_in_data.add(selector)
+  if (selector_data[selector_bcd[selector]['__compat']['description'].replace('<code>', '').replace('</code>', '')] == null) {
+    missing_in_data.add(selector_bcd[selector]['__compat']['description'].replace('<code>', '').replace('</code>', ''))
   }
 }
 
