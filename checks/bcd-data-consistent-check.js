@@ -145,6 +145,10 @@ for (const type in type_bcd) {
     continue
   }
 
+  if (function_data[type + '()'] != null) {
+    continue
+  }
+
   missing_in_data.add(type)
 }
 
