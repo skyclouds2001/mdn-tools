@@ -129,7 +129,15 @@ for (const selector in selector_bcd) {
     continue
   }
 
+  if (selector_data['::' + selector + '()'] != null) {
+    continue
+  }
+
   if (selector_data[':' + selector] != null) {
+    continue
+  }
+
+  if (selector_data[':' + selector + '()'] != null) {
     continue
   }
 

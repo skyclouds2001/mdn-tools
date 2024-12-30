@@ -264,8 +264,6 @@
       "::file-selector-button",
       ":has-slotted",
       "::highlight()",
-      ":host",
-      ":host-context()",
       ":modal",
       ":muted",
       "Namespace selector (|)",
