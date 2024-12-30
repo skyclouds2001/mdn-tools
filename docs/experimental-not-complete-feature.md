@@ -1,6 +1,6 @@
-# experimental-undocumented-feature
+# not-fully-supported-feature
 
-Track features that are in spec but not added in [mdn/data](https://github.com/mdn/data) because of lack of support
+Track features that are in spec but not add full syntax in [mdn/data](https://github.com/mdn/data) due to lack of support
 
 * `contrast-color()` function and `device-cmyk()` function for `<color>` type
   * https://drafts.csswg.org/css-color-5/#typedef-color
