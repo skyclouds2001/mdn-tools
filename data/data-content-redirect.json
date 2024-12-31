@@ -72,6 +72,7 @@
     "-webkit-mask-position": "mask-position",
     "-webkit-mask-repeat": "mask-repeat",
     "-webkit-mask-size": "mask-size",
+    "-webkit-user-select": "user-select",
     "grid-column-gap": "column-gap",
     "grid-gap": "gap",
     "grid-row-gap": "row-gap",

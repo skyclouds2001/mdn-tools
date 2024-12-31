@@ -38,11 +38,10 @@
       "::-ms-value",
       "::-webkit-progress-inner-value",
       "::cue-region",
+      "::cue-region()",
       "an-plus-b"
     ],
-    "mismatch_mdn_url": [
-      "repeating-radial-gradient()"
-    ],
+    "mismatch_mdn_url": [],
     "missing_mdn_content": [
       "-ms-accelerator",
       "-ms-block-progression",

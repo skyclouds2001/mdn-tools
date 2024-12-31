@@ -84,7 +84,7 @@ for (const selector in selector_data) {
   if (selector_data[selector]['mdn_url'] == null) {
     missing_mdn_url.add(selector)
   } else {
-    if (selector_data[selector]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${redirects['selectors'][selector] ?? selector.replaceAll(' ', '_')}`) {
+    if (selector_data[selector]['mdn_url'] !== `https://developer.mozilla.org/docs/Web/CSS/${redirects['selectors'][selector] ?? selector.replaceAll(' ', '_').replaceAll('(', '').replaceAll(')', '')}`) {
       mismatch_mdn_url.add(selector)
     }
     if (!fs.existsSync(path.resolve(root, '@mdn/content/files/en-us/web/css', selector_data[selector]['mdn_url'].replaceAll('https://developer.mozilla.org/docs/Web/CSS/', '').replaceAll('::', '_doublecolon_').replaceAll(':', '_colon_')))) {
