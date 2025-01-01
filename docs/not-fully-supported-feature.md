@@ -3,7 +3,7 @@
 Track features that are in [mdn/data](https://github.com/mdn/data) but without full syntax in spec due to lack of support
 
 * `caption-side` property
-  * `{block,inline}-{start,end}` value
+  * `inline-{start,end}` value
   * https://drafts.csswg.org/css-tables/#propdef-caption-side
   * https://drafts.csswg.org/css-logical/#caption-side
 * `column-fill` property
