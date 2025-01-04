@@ -3,6 +3,7 @@
     "missing_mdn_url": [
       "@page/bleed",
       "@page/marks",
+      "@view-transition/navigation",
       "leader()",
       "target-counter()",
       "target-counters()",
@@ -22,6 +23,9 @@
       "text-box",
       "text-box-edge",
       "text-box-trim",
+      ":active-view-transition",
+      ":active-view-transition-type()",
+      ":xr-overlay",
       "::-ms-browse",
       "::-ms-check",
       "::-ms-clear",
@@ -39,6 +43,7 @@
       "::-webkit-progress-inner-value",
       "::cue-region",
       "::cue-region()",
+      "::details-content",
       "an-plus-b"
     ],
     "mismatch_mdn_url": [],
