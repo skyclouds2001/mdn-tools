@@ -4,6 +4,7 @@
     "blur()": "filter-function/blur",
     "brightness()": "filter-function/brightness",
     "circle()": "basic-shape/circle",
+    "color()": "color_value/color",
     "conic-gradient()": "gradient/conic-gradient",
     "contrast()": "filter-function/contrast",
     "drop-shadow()": "filter-function/drop-shadow",
@@ -64,6 +65,7 @@
   },
   "properties": {
     "-moz-appearance": "appearance",
+    "-moz-user-modify": "user-modify",
     "-webkit-appearance": "appearance",
     "-webkit-mask": "mask",
     "-webkit-mask-clip": "mask-clip",
@@ -76,6 +78,7 @@
     "grid-column-gap": "column-gap",
     "grid-gap": "gap",
     "grid-row-gap": "row-gap",
+    "masonry-auto-flow": "grid-auto-flow",
     "word-wrap": "overflow-wrap"
   },
   "selectors": {
