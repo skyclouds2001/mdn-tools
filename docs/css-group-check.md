@@ -1,5 +1,5 @@
-- [ ] Basic Selectors
-- [ ] Combinators
+- [-] Basic Selectors
+- [-] Combinators
 - [ ] Compositing and Blending
 - [x] CSS Angles
 - [ ] CSS Animations
@@ -34,7 +34,7 @@
 - [ ] CSS Masking
 - [x] CSS Miscellaneous
 - [ ] CSS Motion Path
-- [ ] CSS Namespaces
+- [x] CSS Namespaces
 - [ ] CSS Overflow
 - [ ] CSS Pages
 - [ ] CSS Positioning
@@ -42,9 +42,10 @@
 - [x] CSS Resolutions
 - [ ] CSS Ruby
 - [ ] CSS Scroll Anchoring
-- [ ] CSS Scrollbars
 - [ ] CSS Scroll Snap
-- [ ] CSS Shadow Parts
+- [x] CSS Scrollbars
+- [x] CSS Scrollbars Styling
+- [x] CSS Shadow Parts
 - [ ] CSS Shapes
 - [x] CSS Speech
 - [x] CSS Syntax
@@ -54,24 +55,24 @@
 - [x] CSS Times
 - [ ] CSS Transforms
 - [ ] CSS Transitions
-- [ ] CSS Types
+- [-] CSS Types
 - [x] CSS Units
-- [-] CSS Values and Units
+- [t] CSS Values and Units
 - [ ] CSS Variables
-- [ ] CSS View Transitions
+- [x] CSS View Transitions
 - [x] CSS Will Change
-- [ ] CSS Writing Modes
+- [x] CSS Writing Modes
 - [ ] CSSOM View
 - [ ] Filter Effects
-- [ ] Grouping Selectors
-- [ ] MathML
+- [-] Grouping Selectors
+- [x] MathML
 - [ ] Media Queries
-- [ ] Microsoft Extensions
-- [ ] Mozilla Extensions
-- [ ] Pointer Events
-- [ ] Pseudo
-- [ ] Pseudo-classes
-- [ ] Pseudo-elements
-- [ ] Selectors
+- [-] Microsoft Extensions
+- [-] Mozilla Extensions
+- [x] Pointer Events
+- [-] Pseudo
+- [-] Pseudo-classes
+- [-] Pseudo-elements
+- [-] Selectors
 - [ ] Scalable Vector Graphics
-- [ ] WebKit Extensions"
+- [-] WebKit Extensions
