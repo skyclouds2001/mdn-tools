@@ -5,6 +5,7 @@
     "brightness()": "filter-function/brightness",
     "circle()": "basic-shape/circle",
     "color()": "color_value/color",
+    "color-mix()": "color_value/color-mix",
     "conic-gradient()": "gradient/conic-gradient",
     "contrast()": "filter-function/contrast",
     "drop-shadow()": "filter-function/drop-shadow",

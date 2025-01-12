@@ -3,6 +3,7 @@
     "not_in_syntax": [],
     "not_in_function": [],
     "mismatch_syntax_between_function_and_syntax": [
+      "color()",
       "linear-gradient()"
     ]
   }
