@@ -15,7 +15,8 @@
 - [ ] CSS Columns
 - [ ] CSS Conditional Rules
 - [ ] CSS Containment
-- [ ] CSS Counter Styles
+- [x] CSS Counter Styles
+- [x] CSS Custom Properties for Cascading Variables
 - [ ] CSS Device Adaptation
 - [ ] CSS Display
 - [ ] CSS Flexible Box Layout
@@ -29,7 +30,7 @@
 - [ ] CSS Images
 - [ ] CSS Inline
 - [x] CSS Lengths
-- [ ] CSS Lists and Counters
+- [x] CSS Lists and Counters
 - [ ] CSS Logical Properties
 - [ ] CSS Masking
 - [x] CSS Miscellaneous
@@ -58,7 +59,7 @@
 - [-] CSS Types
 - [x] CSS Units
 - [t] CSS Values and Units
-- [ ] CSS Variables
+- [x] CSS Variables
 - [x] CSS View Transitions
 - [x] CSS Will Change
 - [x] CSS Writing Modes
