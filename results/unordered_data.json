@@ -1,3 +1,5 @@
 {
-  "unordered_data": {}
+  "unordered_data": {
+    "color-function": "color()"
+  }
 }
