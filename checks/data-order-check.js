@@ -13,6 +13,8 @@ import data from '../@mdn/data/index.js'
 
 import { compare } from '../utils/index.js'
 
+import definitions from '../@mdn/data/css/definitions.json' with { type: 'json' }
+
 import ignores from '../ignores/unordered_data.json' with { type: 'json' }
 
 const root = process.cwd()
@@ -27,6 +29,14 @@ const unit_data = data['css']['units']
 const l10n_data = data['l10n']['css']
 
 const unordered_data = new Map()
+
+let previous_definition
+for (const definition in definitions) {
+  if (previous_definition != null && ignores[previous_definition] !== definition && compare(previous_definition, definition) === 1) {
+    unordered_data.set(previous_definition, definition)
+  }
+  previous_definition = definition
+}
 
 let previous_at_rule
 for (const at_rule in at_rule_data) {
