@@ -1,5 +1,3 @@
-// @ts-check
-
 import fs from 'node:fs'
 
 import bcd from '../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
