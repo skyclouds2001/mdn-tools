@@ -1,6 +1,6 @@
 - [-] Basic Selectors
 - [-] Combinators
-- [ ] Compositing and Blending
+- [x] Compositing and Blending
 - [x] CSS Angles
 - [ ] CSS Animations
 - [ ] CSS Backgrounds and Borders
@@ -17,12 +17,12 @@
 - [ ] CSS Containment
 - [x] CSS Counter Styles
 - [x] CSS Custom Properties for Cascading Variables
-- [ ] CSS Device Adaptation
+- [x] CSS Device Adaptation
 - [ ] CSS Display
 - [ ] CSS Flexible Box Layout
 - [ ] CSS Flexible Lengths
 - [ ] CSS Fonts
-- [ ] CSS Fragmentation
+- [x] CSS Fragmentation
 - [x] CSS Frequencies
 - [x] CSS Generated Content
 - [ ] CSS Grid Layout
@@ -34,7 +34,7 @@
 - [ ] CSS Logical Properties
 - [ ] CSS Masking
 - [x] CSS Miscellaneous
-- [ ] CSS Motion Path
+- [x] CSS Motion Path
 - [x] CSS Namespaces
 - [ ] CSS Overflow
 - [ ] CSS Pages
@@ -42,8 +42,8 @@
 - [x] CSS Regions
 - [x] CSS Resolutions
 - [ ] CSS Ruby
-- [ ] CSS Scroll Anchoring
-- [ ] CSS Scroll Snap
+- [x] CSS Scroll Anchoring
+- [x] CSS Scroll Snap
 - [x] CSS Scrollbars
 - [x] CSS Scrollbars Styling
 - [x] CSS Shadow Parts
@@ -58,17 +58,19 @@
 - [ ] CSS Transitions
 - [-] CSS Types
 - [x] CSS Units
-- [t] CSS Values and Units
+- [~] CSS Values and Units
 - [x] CSS Variables
 - [x] CSS View Transitions
+- [x] CSS Viewport
 - [x] CSS Will Change
 - [x] CSS Writing Modes
-- [ ] CSSOM View
-- [ ] Filter Effects
+- [x] CSSOM View
+- [x] Filter Effects
 - [-] Grouping Selectors
 - [x] MathML
 - [ ] Media Queries
 - [-] Microsoft Extensions
+- [x] Motion Path
 - [-] Mozilla Extensions
 - [x] Pointer Events
 - [-] Pseudo
