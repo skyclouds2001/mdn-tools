@@ -263,7 +263,8 @@
       ":open",
       "-moz-image-rect",
       "calc-keyword",
-      "global_keywords"
+      "global_keywords",
+      "text-edge"
     ]
   }
 }
