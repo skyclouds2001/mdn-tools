@@ -230,6 +230,7 @@
       "simpleListOfLpc",
       "simpleListOfLpcDifferenceLpc",
       "specifiedIntegerOrAbsoluteLength",
+      "specifiedValue",
       "specifiedValueClipped0To1",
       "specifiedValueNumberClipped0To1",
       "startOrNamelessValueIfLTRRightIfRTL",

@@ -1,4 +1,16 @@
 {
+  "page-break-after": {
+    "actual": "standard",
+    "expected": "obsolete"
+  },
+  "page-break-before": {
+    "actual": "standard",
+    "expected": "obsolete"
+  },
+  "page-break-inside": {
+    "actual": "standard",
+    "expected": "obsolete"
+  },
   ":active-view-transition-type()": {
     "actual": "standard",
     "expected": "experimental"
