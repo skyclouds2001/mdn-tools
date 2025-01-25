@@ -4,7 +4,7 @@
 - [x] CSS Angles
 - [ ] CSS Animations
 - [ ] CSS Backgrounds and Borders
-- [ ] CSS Basic User Interface
+- [x] CSS Basic User Interface
 - [ ] CSS Box Alignment
 - [ ] CSS Box Model
 - [ ] CSS Box Sizing
@@ -13,7 +13,7 @@
 - [x] CSS Charsets
 - [ ] CSS Color
 - [ ] CSS Columns
-- [ ] CSS Conditional Rules
+- [x] CSS Conditional Rules
 - [ ] CSS Containment
 - [x] CSS Counter Styles
 - [x] CSS Custom Properties for Cascading Variables
@@ -68,7 +68,7 @@
 - [x] Filter Effects
 - [-] Grouping Selectors
 - [x] MathML
-- [ ] Media Queries
+- [x] Media Queries
 - [-] Microsoft Extensions
 - [x] Motion Path
 - [-] Mozilla Extensions
@@ -77,5 +77,5 @@
 - [-] Pseudo-classes
 - [-] Pseudo-elements
 - [-] Selectors
-- [ ] Scalable Vector Graphics
+- [-] Scalable Vector Graphics
 - [-] WebKit Extensions
