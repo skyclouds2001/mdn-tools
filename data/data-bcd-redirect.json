@@ -1,0 +1,36 @@
+{
+  "at-rules": {},
+  "functions": {},
+  "properties": {
+    "--*": "custom-property",
+    "-moz-appearance": "appearance",
+    "-webkit-appearance": "appearance",
+    "-webkit-line-clamp": "line-clamp",
+    "-webkit-mask": "mask",
+    "-webkit-mask-clip": "mask-clip",
+    "-webkit-mask-image": "mask-image",
+    "-webkit-mask-origin": "mask-origin",
+    "-webkit-mask-position": "mask-position",
+    "-webkit-mask-repeat": "mask-repeat",
+    "-webkit-mask-size": "mask-size",
+    "-webkit-user-select": "user-select",
+    "grid-column-gap": "column-gap",
+    "grid-gap": "gap",
+    "grid-row-gap": "row-gap",
+    "word-wrap": "overflow-wrap"
+  },
+  "selectors": {
+    "Type selectors": "type",
+    "Class selectors": "class",
+    "ID selectors": "id",
+    "Universal selectors": "universal",
+    "Attribute selectors": "attribute",
+    "Selector list": "list",
+    "Next-sibling combinator": "next-sibling",
+    "Subsequent-sibling combinator": "subsequent-sibling",
+    "Child combinator": "child",
+    "Descendant combinator": "descendant"
+  },
+  "types": {},
+  "units": {}
+}

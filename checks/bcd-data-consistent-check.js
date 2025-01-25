@@ -12,6 +12,7 @@ import bcd from '../@mdn/browser-compat-data/build/data.json' with { type: 'json
 import data from '../@mdn/data/index.js'
 
 import bcd_data_redirect from '../data/bcd-data-redirect.json' with { type: 'json' }
+import data_bcd_redirect from '../data/data-bcd-redirect.json' with { type: 'json' }
 
 const root = process.cwd()
 
@@ -32,6 +33,10 @@ const missing_in_bcd = new Set()
 const missing_in_data = new Set()
 
 for (const at_rule in at_rule_data) {
+  if (data_bcd_redirect['at-rules'][at_rule] != null && at_rule_bcd[data_bcd_redirect['at-rules'][at_rule]] != null) {
+    continue
+  }
+
   if (at_rule_bcd[at_rule.replace(/^@/, '')] == null) {
     missing_in_bcd.add(at_rule)
   }
@@ -48,6 +53,10 @@ for (const at_rule in at_rule_data) {
 }
 
 for (const func in function_data) {
+  if (data_bcd_redirect['functions'][func] != null && function_bcd[data_bcd_redirect['functions'][func]] != null) {
+    continue
+  }
+
   if (
     function_bcd[func.replace(/\(\)$/, '')] == null &&
     function_bcd['basic-shape'][func.replace(/\(\)$/, '')] == null &&
@@ -65,24 +74,40 @@ for (const func in function_data) {
 }
 
 for (const property in property_data) {
+  if (data_bcd_redirect['properties'][property] != null && property_bcd[data_bcd_redirect['properties'][property]] != null) {
+    continue
+  }
+
   if (property_bcd[property] == null) {
     missing_in_bcd.add(property)
   }
 }
 
 for (const selector in selector_data) {
+  if (data_bcd_redirect['selectors'][selector] != null && selector_bcd[data_bcd_redirect['selectors'][selector]] != null) {
+    continue
+  }
+
   if (selector_bcd[selector.replace(/^::?/, '').replace(/\(\)$/, '')] == null) {
     missing_in_bcd.add(selector)
   }
 }
 
 for (const type in type_data) {
+  if (data_bcd_redirect['types'][type] != null && type_bcd[data_bcd_redirect['types'][type]] != null) {
+    continue
+  }
+
   if (type_bcd[type] == null && type_bcd['image'][type] == null) {
     missing_in_bcd.add(type)
   }
 }
 
 for (const unit in unit_data) {
+  if (data_bcd_redirect['units'][unit] != null && unit_bcd[data_bcd_redirect['units'][unit]] != null) {
+    continue
+  }
+
   if (
     unit_bcd['length'][unit] == null &&
     unit_bcd['resolution'][unit] == null &&
