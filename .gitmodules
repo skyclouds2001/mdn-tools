@@ -1,9 +1,12 @@
 [submodule "@mdn/data"]
 	path = @mdn/data
 	url = https://github.com/mdn/data
+	branch = main
 [submodule "@mdn/browser-compat-data"]
 	path = @mdn/browser-compat-data
 	url = https://github.com/mdn/browser-compat-data
+	branch = main
 [submodule "@mdn/content"]
 	path = @mdn/content
 	url = https://github.com/mdn/content
+	branch = main
