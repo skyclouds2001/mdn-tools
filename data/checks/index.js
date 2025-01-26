@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 
-import bcd from '../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
-import data from '../@mdn/data/index.js'
+import bcd from '../../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
+import data from '../../@mdn/data/index.js'
 
 import './data-order-check.js'
 import './function-consistent-check.js'
@@ -158,7 +158,7 @@ for (const unit in unit_data) {
   }
 }
 
-fs.writeFileSync('./results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
+fs.writeFileSync('./data/results/mismatch_status.json', JSON.stringify(Object.fromEntries(mismatch_status.map(({ data, actual, expected }) => ([data, { actual, expected }]))), null, 2))
 
 function compare_status(bcd, data) {
   const status = bcd['__compat']['status']

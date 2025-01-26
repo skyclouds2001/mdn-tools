@@ -9,11 +9,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 
-import data from '../@mdn/data/index.js'
+import data from '../../@mdn/data/index.js'
 
 import { compare } from '../utils/index.js'
 
-import definitions from '../@mdn/data/css/definitions.json' with { type: 'json' }
+import definitions from '../../@mdn/data/css/definitions.json' with { type: 'json' }
 
 import ignores from '../ignores/unordered_data.json' with { type: 'json' }
 
@@ -115,7 +115,7 @@ for (const [l10n] of Object.entries(l10n_data)) {
 }
 
 fs.writeFileSync(
-  path.resolve(root, 'results/unordered_data.json'),
+  path.resolve(root, 'data/results/unordered_data.json'),
   JSON.stringify({
     unordered_data: Object.fromEntries(unordered_data),
   }, null, 2),

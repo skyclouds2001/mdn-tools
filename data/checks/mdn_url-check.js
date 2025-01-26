@@ -8,9 +8,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 
-import data from '../@mdn/data/index.js'
+import data from '../../@mdn/data/index.js'
 
-import redirects from '../data/data-content-redirect.json' with { type: 'json' }
+import redirects from '../meta/data-content-redirect.json' with { type: 'json' }
 
 const root = process.cwd()
 
@@ -107,7 +107,7 @@ for (const type in type_data) {
 }
 
 fs.writeFileSync(
-  path.resolve(root, 'results/incorrect_mdn_url.json'),
+  path.resolve(root, 'data/results/incorrect_mdn_url.json'),
   JSON.stringify({
     incorrect_mdn_url: {
       missing_mdn_url: Array.from(missing_mdn_url),

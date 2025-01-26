@@ -8,7 +8,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 
-import data from '../@mdn/data/index.js'
+import data from '../../@mdn/data/index.js'
 
 const root = process.cwd()
 
@@ -23,7 +23,7 @@ for (const [key, value] of Object.entries(l10n_data)) {
 }
 
 fs.writeFileSync(
-  path.resolve(root, 'results/missing_l10n.json'),
+  path.resolve(root, 'data/results/missing_l10n.json'),
   JSON.stringify({
     missing_l10n: {
       'zh-CN': Array.from(missing_l10n),

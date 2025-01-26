@@ -8,7 +8,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 
-import data from '../@mdn/data/index.js'
+import data from '../../@mdn/data/index.js'
 
 const root = process.cwd()
 
@@ -39,7 +39,7 @@ for (const syntax in syntax_data) {
 }
 
 fs.writeFileSync(
-  path.resolve(root, 'results/inconsistent_function.json'),
+  path.resolve(root, 'data/results/inconsistent_function.json'),
   JSON.stringify({
     inconsistent_function: {
       not_in_syntax: Array.from(not_in_syntax),

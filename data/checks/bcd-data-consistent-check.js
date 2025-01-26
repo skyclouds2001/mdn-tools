@@ -8,11 +8,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 
-import bcd from '../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
-import data from '../@mdn/data/index.js'
+import bcd from '../../@mdn/browser-compat-data/build/data.json' with { type: 'json' }
+import data from '../../@mdn/data/index.js'
 
-import bcd_data_redirect from '../data/bcd-data-redirect.json' with { type: 'json' }
-import data_bcd_redirect from '../data/data-bcd-redirect.json' with { type: 'json' }
+import bcd_data_redirect from '../meta/bcd-data-redirect.json' with { type: 'json' }
+import data_bcd_redirect from '../meta/data-bcd-redirect.json' with { type: 'json' }
 
 const root = process.cwd()
 
@@ -186,7 +186,7 @@ for (const type in type_bcd) {
 }
 
 fs.writeFileSync(
-  path.resolve(root, 'results/inconsistent_bcd_data.json'),
+  path.resolve(root, 'data/results/inconsistent_bcd_data.json'),
   JSON.stringify({
     inconsistent_bcd_data: {
       'missing_in_bcd': Array.from(missing_in_bcd),
