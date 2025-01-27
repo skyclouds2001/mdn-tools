@@ -10,3 +10,7 @@
 	path = @mdn/content
 	url = https://github.com/mdn/content
 	branch = main
+[submodule "@mdn/translated-content"]
+	path = @mdn/translated-content
+	url = https://github.com/mdn/translated-content.git
+	branch = main
