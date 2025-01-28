@@ -5,9 +5,9 @@
 - [ ] CSS Animations
 - [ ] CSS Backgrounds and Borders
 - [x] CSS Basic User Interface
-- [ ] CSS Box Alignment
-- [ ] CSS Box Model
-- [ ] CSS Box Sizing
+- [x] CSS Box Alignment
+- [x] CSS Box Model
+- [x] CSS Box Sizing
 - [x] CSS Break
 - [x] CSS Cascading and Inheritance
 - [x] CSS Charsets
@@ -18,9 +18,9 @@
 - [x] CSS Counter Styles
 - [x] CSS Custom Properties for Cascading Variables
 - [x] CSS Device Adaptation
-- [ ] CSS Display
-- [ ] CSS Flexible Box Layout
-- [ ] CSS Flexible Lengths
+- [x] CSS Display
+- [x] CSS Flexible Box Layout
+- [x] CSS Flexible Lengths
 - [ ] CSS Fonts
 - [x] CSS Fragmentation
 - [x] CSS Frequencies
