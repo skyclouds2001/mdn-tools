@@ -23,16 +23,8 @@ child_process.execSync('git submodule update --recursive --remote', {
   cwd: root,
 })
 
-child_process.execSync('git pull', {
-  cwd: path.resolve(root, '@mdn/data'),
-})
-
 child_process.execSync('npm ci', {
   cwd: path.resolve(root, '@mdn/data'),
-})
-
-child_process.execSync('git pull', {
-  cwd: path.resolve(root, '@mdn/browser-compat-data'),
 })
 
 child_process.execSync('npm ci', {
@@ -41,9 +33,6 @@ child_process.execSync('npm ci', {
 
 child_process.execSync('npm run build', {
   cwd: path.resolve(root, '@mdn/browser-compat-data'),
-})
-child_process.execSync('git pull', {
-  cwd: path.resolve(root, '@mdn/content'),
 })
 
 child_process.execSync('yarn', {
