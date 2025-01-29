@@ -1,3 +1,27 @@
 [
-  "Web/API/Navigation_API"
+  "Web/API/Navigation_API",
+  "Web/API/Navigation",
+  "Web/API/Navigation/activation",
+  "Web/API/Navigation/canGoBack",
+  "Web/API/Navigation/canGoForward",
+  "Web/API/Navigation/currentEntry",
+  "Web/API/Navigation/transition",
+  "Web/API/Navigation/back",
+  "Web/API/Navigation/entries",
+  "Web/API/Navigation/forward",
+  "Web/API/Navigation/updateCurrentEntry",
+  "Web/API/Navigation/currententrychange_event",
+  "Web/API/NavigationHistoryEntry",
+  "Web/API/NavigationHistoryEntry/dispose_event",
+  "Web/API/NavigationTransition",
+  "Web/API/NavigationTransition/finished",
+  "Web/API/NavigationTransition/from",
+  "Web/API/NavigationTransition/navigationType",
+  "Web/API/NavigationDestination",
+  "Web/API/NavigationActivation",
+  "Web/API/NavigationActivation/entry",
+  "Web/API/NavigationActivation/from",
+  "Web/API/NavigationActivation/navigationType",
+  "Web/API/NavigateEvent",
+  "Web/API/NavigationCurrentEntryChangeEvent"
 ]

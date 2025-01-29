@@ -22,10 +22,26 @@ const logs = new Set()
 for (const tracking_file of tracking_files) {
   const SOURCE_FILE = path.resolve(CONTENT_ROOT, tracking_file.toLowerCase(), 'index.md')
   const TARGET_FILE = path.resolve(TRANSLATED_CONTENT_ROOT, tracking_file.toLowerCase(), 'index.md')
-  const sha = child_process.execSync(`git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`, { cwd: CONTENT_ROOT }).toString('utf-8')
-  if (!fs.readFileSync(TARGET_FILE, 'utf-8').includes(sha)) {
-    logs.add(tracking_file)
-  }
+  const COMMAND = `git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`
+  const { promise, resolve, reject } = Promise.withResolvers()
+  logs.add(promise)
+  child_process.exec(COMMAND, { cwd: CONTENT_ROOT }, (err, sha) => {
+    if (err != null) {
+      reject(err)
+    }
+    fs.readFile(TARGET_FILE, 'utf-8', (err, content) => {
+      if (err != null) {
+        reject(err)
+      }
+      if (!content.includes(sha)) {
+        resolve(tracking_file)
+      } else {
+        resolve()
+      }
+    })
+  })
 }
 
-fs.writeFileSync(LOG_FILE, JSON.stringify(Array.from(logs)), 'utf-8')
+Promise.allSettled(Array.from(logs)).then((results) => {
+  fs.writeFileSync(LOG_FILE, JSON.stringify(results.filter(v => v.status === 'fulfilled').filter((v) => v.value != null).map(v => v.value), null, 2), 'utf-8')
+})
