@@ -2,6 +2,7 @@ import child_process from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import fm from 'front-matter'
 
 import tracking_files from '../meta/tracking.json' with { type: 'json' }
 
@@ -33,7 +34,9 @@ for (const tracking_file of tracking_files) {
       if (err != null) {
         reject(err)
       }
-      if (!content.includes(sha)) {
+      const data = fm(content)
+      const sourceCommit = data.attributes.l10n?.sourceCommit
+      if (sourceCommit == null || sourceCommit.trim() !== sha.trim()) {
         resolve(tracking_file)
       } else {
         resolve()
