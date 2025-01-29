@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "init": "node ./scripts/init.js",
-    "check:data": "node ./data/checks/index.js"
+    "check:data": "node ./data/checks/index.js",
+    "check:translated-content": "node ./translated-content/checks/index.js"
   }
 }
