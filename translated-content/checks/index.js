@@ -20,24 +20,29 @@ const LOG_FILE = path.resolve(root, 'translated-content/results/logs.json')
 
 const logs = new Set()
 
-for (const tracking_file of tracking_files) {
-  const SOURCE_FILE = path.resolve(CONTENT_ROOT, tracking_file.toLowerCase(), 'index.md')
-  const TARGET_FILE = path.resolve(TRANSLATED_CONTENT_ROOT, tracking_file.toLowerCase(), 'index.md')
+for (const slug of tracking_files) {
+  const file = slug
+    .replace('::', '_doublecolon_')
+    .replace(':', '_colon_')
+  const SOURCE_FILE = path.resolve(CONTENT_ROOT, file.toLowerCase(), 'index.md')
+  const TARGET_FILE = path.resolve(TRANSLATED_CONTENT_ROOT, file.toLowerCase(), 'index.md')
   const COMMAND = `git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`
   const { promise, resolve, reject } = Promise.withResolvers()
   logs.add(promise)
   child_process.exec(COMMAND, { cwd: CONTENT_ROOT }, (err, sha) => {
     if (err != null) {
+      console.trace(err)
       reject(err)
     }
     fs.readFile(TARGET_FILE, 'utf-8', (err, content) => {
       if (err != null) {
+        console.trace(err)
         reject(err)
       }
       const data = fm(content)
       const sourceCommit = data.attributes.l10n?.sourceCommit
       if (sourceCommit == null || sourceCommit.trim() !== sha.trim()) {
-        resolve(tracking_file)
+        resolve(slug)
       } else {
         resolve()
       }
