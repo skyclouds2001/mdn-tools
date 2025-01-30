@@ -36,5 +36,9 @@ child_process.execSync('npm run build', {
 })
 
 child_process.execSync('yarn', {
+  cwd: path.resolve(root, '@mdn/translated-content'),
+})
+
+child_process.execSync('yarn', {
   cwd: path.resolve(root, '@mdn/content'),
 })
