@@ -12,9 +12,9 @@
 - [x] CSS Cascading and Inheritance
 - [x] CSS Charsets
 - [ ] CSS Color
-- [ ] CSS Columns
+- [x] CSS Columns
 - [x] CSS Conditional Rules
-- [ ] CSS Containment
+- [x] CSS Containment
 - [x] CSS Counter Styles
 - [x] CSS Custom Properties for Cascading Variables
 - [x] CSS Device Adaptation
@@ -25,7 +25,7 @@
 - [x] CSS Fragmentation
 - [x] CSS Frequencies
 - [x] CSS Generated Content
-- [ ] CSS Grid Layout
+- [x] CSS Grid Layout
 - [x] CSS Houdini
 - [ ] CSS Images
 - [ ] CSS Inline
@@ -35,9 +35,12 @@
 - [ ] CSS Masking
 - [x] CSS Miscellaneous
 - [x] CSS Motion Path
+- [x] CSS Multi-column Layout
 - [x] CSS Namespaces
 - [ ] CSS Overflow
-- [ ] CSS Pages
+- [x] CSS Overscroll Behavior
+- [x] CSS Paged Media
+- [x] CSS Pages
 - [ ] CSS Positioning
 - [x] CSS Regions
 - [x] CSS Resolutions
