@@ -5,6 +5,8 @@
   "Web/API/Notification/Notification",
   "Web/API/Notification/silent",
   "Web/API/Notification/close",
+  "Web/API/Web_Share_API",
+  "Web/API/Navigator/share",
   "Web/HTTP/Headers/Permissions-Policy/web-share",
   "Web/API/Permissions_API",
   "Web/API/Permissions/query",
@@ -22,6 +24,7 @@
   "Web/API/MessageChannel/port2",
   "Web/API/MessagePort/message_event",
   "Web/API/MessagePort/messageerror_event",
+  "Web/API/PictureInPictureWindow/height",
   "Web/API/PictureInPictureWindow/width",
   "Web/API/HTMLVideoElement/disablePictureInPicture",
   "Web/API/Document_Picture-in-Picture_API/Using",
@@ -30,5 +33,8 @@
   "Web/API/Document/fullscreenchange_event",
   "Web/API/Element/fullscreenchange_event",
   "Web/CSS/:fullscreen",
+  "Web/API/KeyboardLayoutMap/entries",
+  "Web/API/KeyboardLayoutMap/keys",
+  "Web/API/KeyboardLayoutMap/values",
   "Web/API/NavigateEvent"
 ]
