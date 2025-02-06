@@ -14,5 +14,9 @@
   ":active-view-transition-type()": {
     "actual": "standard",
     "expected": "experimental"
+  },
+  ":has-slotted": {
+    "actual": "experimental",
+    "expected": "standard"
   }
 }

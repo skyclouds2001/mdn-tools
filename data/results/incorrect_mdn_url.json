@@ -122,7 +122,11 @@
       "::details-content",
       "an-plus-b"
     ],
-    "mismatch_mdn_url": [],
-    "missing_mdn_content": []
+    "mismatch_mdn_url": [
+      "-webkit-line-clamp"
+    ],
+    "missing_mdn_content": [
+      "-webkit-line-clamp"
+    ]
   }
 }

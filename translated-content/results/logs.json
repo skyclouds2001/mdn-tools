@@ -32,9 +32,10 @@
   "Web/API/Fullscreen_API/Guide",
   "Web/API/Document/fullscreenchange_event",
   "Web/API/Element/fullscreenchange_event",
-  "Web/CSS/:fullscreen",
   "Web/API/KeyboardLayoutMap/entries",
   "Web/API/KeyboardLayoutMap/keys",
   "Web/API/KeyboardLayoutMap/values",
-  "Web/API/NavigateEvent"
+  "Web/API/NavigateEvent",
+  "Web/CSS/:fullscreen",
+  "Web/CSS/:picture-in-picture"
 ]

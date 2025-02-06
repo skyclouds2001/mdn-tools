@@ -196,6 +196,7 @@
       "baseline-source",
       "color-adjust",
       "color-interpolation",
+      "dynamic-range-limit",
       "glyph-orientation-vertical",
       "object-view-box",
       "reading-flow",
