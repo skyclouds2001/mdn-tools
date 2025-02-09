@@ -3,7 +3,7 @@
 - [x] Compositing and Blending
 - [x] CSS Angles
 - [ ] CSS Animations
-- [ ] CSS Backgrounds and Borders
+- [x] CSS Backgrounds and Borders
 - [x] CSS Basic User Interface
 - [x] CSS Box Alignment
 - [x] CSS Box Model
@@ -27,30 +27,30 @@
 - [x] CSS Generated Content
 - [x] CSS Grid Layout
 - [x] CSS Houdini
-- [ ] CSS Images
-- [ ] CSS Inline
+- [x] CSS Images
+- [x] CSS Inline
 - [x] CSS Lengths
 - [x] CSS Lists and Counters
-- [ ] CSS Logical Properties
-- [ ] CSS Masking
+- [x] CSS Logical Properties
+- [x] CSS Masking
 - [x] CSS Miscellaneous
 - [x] CSS Motion Path
 - [x] CSS Multi-column Layout
 - [x] CSS Namespaces
-- [ ] CSS Overflow
+- [x] CSS Overflow
 - [x] CSS Overscroll Behavior
 - [x] CSS Paged Media
 - [x] CSS Pages
-- [ ] CSS Positioning
+- [x] CSS Positioning
 - [x] CSS Regions
 - [x] CSS Resolutions
-- [ ] CSS Ruby
+- [x] CSS Ruby
 - [x] CSS Scroll Anchoring
 - [x] CSS Scroll Snap
 - [x] CSS Scrollbars
 - [x] CSS Scrollbars Styling
 - [x] CSS Shadow Parts
-- [ ] CSS Shapes
+- [x] CSS Shapes
 - [x] CSS Speech
 - [x] CSS Syntax
 - [ ] CSS Table
