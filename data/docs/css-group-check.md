@@ -2,7 +2,7 @@
 - [-] Combinators
 - [x] Compositing and Blending
 - [x] CSS Angles
-- [ ] CSS Animations
+- [x] CSS Animations
 - [x] CSS Backgrounds and Borders
 - [x] CSS Basic User Interface
 - [x] CSS Box Alignment
@@ -53,12 +53,12 @@
 - [x] CSS Shapes
 - [x] CSS Speech
 - [x] CSS Syntax
-- [ ] CSS Table
+- [x] CSS Table
 - [ ] CSS Text
 - [ ] CSS Text Decoration
 - [x] CSS Times
-- [ ] CSS Transforms
-- [ ] CSS Transitions
+- [x] CSS Transforms
+- [x] CSS Transitions
 - [-] CSS Types
 - [x] CSS Units
 - [~] CSS Values and Units

@@ -27,11 +27,6 @@
   "Web/API/MessagePort/message_event",
   "Web/API/MessagePort/messageerror_event",
   "Web/API/Document_Picture-in-Picture_API/Using",
-  "Web/API/Fullscreen_API/Guide",
-  "Web/API/KeyboardLayoutMap/entries",
-  "Web/API/KeyboardLayoutMap/keys",
-  "Web/API/KeyboardLayoutMap/values",
-  "Web/API/NavigateEvent",
   "Web/CSS/:fullscreen",
   "Web/CSS/:picture-in-picture"
 ]
