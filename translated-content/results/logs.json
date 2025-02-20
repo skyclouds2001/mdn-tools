@@ -1,6 +1,4 @@
 [
-  "Web/API/Local_Font_Access_API",
-  "Web/API/Web_Locks_API",
   "Web/API/Notification",
   "Web/API/Notification/Notification",
   "Web/API/Notification/silent",
@@ -22,11 +20,9 @@
   "Web/API/File/lastModifiedDate",
   "Web/API/File/name",
   "Web/API/FileReader",
+  "Web/API/FileReader/readAsDataURL",
   "Web/API/FileReader/progress_event",
   "Web/API/MessageChannel/port2",
-  "Web/API/MessagePort/message_event",
-  "Web/API/MessagePort/messageerror_event",
-  "Web/API/Document_Picture-in-Picture_API/Using",
   "Web/CSS/:fullscreen",
   "Web/CSS/:picture-in-picture"
 ]
