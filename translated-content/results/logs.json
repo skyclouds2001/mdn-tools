@@ -1,12 +1,8 @@
 [
-  "Web/API/Notification",
-  "Web/API/Notification/Notification",
-  "Web/API/Notification/silent",
-  "Web/API/Notification/close",
-  "Web/API/Web_Share_API",
-  "Web/API/Navigator/share",
+  "Web/API/NavigatorUAData/getHighEntropyValues",
   "Web/API/Permissions_API",
   "Web/API/Permissions/query",
+  "Web/API/File_System_API",
   "Web/API/File_System_API/Origin_private_file_system",
   "Web/API/FileSystemFileHandle/createSyncAccessHandle",
   "Web/API/FileSystemFileHandle/createWritable",
@@ -14,6 +10,7 @@
   "Web/API/Window/showDirectoryPicker",
   "Web/API/Window/showOpenFilePicker",
   "Web/API/Window/showSaveFilePicker",
+  "Web/API/File_API",
   "Web/API/File_API/Using_files_from_web_applications",
   "Web/API/File",
   "Web/API/File/lastModified",
@@ -22,7 +19,6 @@
   "Web/API/FileReader",
   "Web/API/FileReader/readAsDataURL",
   "Web/API/FileReader/progress_event",
-  "Web/API/MessageChannel/port2",
   "Web/CSS/:fullscreen",
   "Web/CSS/:picture-in-picture"
 ]
