@@ -1,5 +1,6 @@
 [
   "Web/API/NavigatorUAData/getHighEntropyValues",
+  "Web/API/Web_Share_API",
   "Web/API/File_System_API",
   "Web/API/File_System_API/Origin_private_file_system",
   "Web/API/FileSystemFileHandle/createSyncAccessHandle",
@@ -10,6 +11,7 @@
   "Web/API/Window/showSaveFilePicker",
   "Web/API/File_API",
   "Web/API/File_API/Using_files_from_web_applications",
+  "Web/API/Blob",
   "Web/API/File",
   "Web/API/File/lastModified",
   "Web/API/File/lastModifiedDate",
@@ -17,6 +19,7 @@
   "Web/API/FileReader",
   "Web/API/FileReader/readAsDataURL",
   "Web/API/FileReader/progress_event",
+  "Web/API/Broadcast_Channel_API",
   "Web/CSS/:fullscreen",
   "Web/CSS/:picture-in-picture"
 ]
