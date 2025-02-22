@@ -11,7 +11,7 @@
 - [x] CSS Break
 - [x] CSS Cascading and Inheritance
 - [x] CSS Charsets
-- [ ] CSS Color
+- [x] CSS Color
 - [x] CSS Columns
 - [x] CSS Conditional Rules
 - [x] CSS Containment
@@ -21,7 +21,7 @@
 - [x] CSS Display
 - [x] CSS Flexible Box Layout
 - [x] CSS Flexible Lengths
-- [ ] CSS Fonts
+- [x] CSS Fonts
 - [x] CSS Fragmentation
 - [x] CSS Frequencies
 - [x] CSS Generated Content
@@ -54,8 +54,8 @@
 - [x] CSS Speech
 - [x] CSS Syntax
 - [x] CSS Table
-- [ ] CSS Text
-- [ ] CSS Text Decoration
+- [x] CSS Text
+- [x] CSS Text Decoration
 - [x] CSS Times
 - [x] CSS Transforms
 - [x] CSS Transitions
