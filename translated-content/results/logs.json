@@ -1,7 +1,5 @@
 [
   "Web/API/NavigatorUAData/getHighEntropyValues",
-  "Web/API/Permissions_API",
-  "Web/API/Permissions/query",
   "Web/API/File_System_API",
   "Web/API/File_System_API/Origin_private_file_system",
   "Web/API/FileSystemFileHandle/createSyncAccessHandle",
