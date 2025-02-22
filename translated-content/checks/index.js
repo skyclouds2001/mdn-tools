@@ -8,13 +8,11 @@ import tracking_files from '../meta/tracking.json' with { type: 'json' }
 
 const root = process.cwd()
 
-const CONTENT_REPO_ROOT = path.resolve(root, '@mdn/content')
+process.loadEnvFile(path.resolve(root, '.env'))
 
-const TRANSLATED_CONTENT_REPO_ROOT = path.resolve(root, '@mdn/translated-content')
+const CONTENT_ROOT = path.resolve(root, process.env.CONTENT_ROOT, 'files/en-us')
 
-const CONTENT_ROOT = path.resolve(CONTENT_REPO_ROOT, 'files/en-us')
-
-const TRANSLATED_CONTENT_ROOT = path.resolve(TRANSLATED_CONTENT_REPO_ROOT, 'files/zh-cn')
+const TRANSLATED_CONTENT_ROOT = path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT, 'files/zh-cn')
 
 const LOG_FILE = path.resolve(root, 'translated-content/results/logs.json')
 
