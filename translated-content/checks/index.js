@@ -16,7 +16,8 @@ const TRANSLATED_CONTENT_ROOT = path.resolve(root, process.env.TRANSLATED_CONTEN
 
 const LOG_FILE = path.resolve(root, 'translated-content/results/logs.json')
 
-const logs = new Set()
+const notfound = new Set()
+const outdated = new Set()
 
 for (const slug of tracking_files) {
   const file = slug
@@ -24,9 +25,15 @@ for (const slug of tracking_files) {
     .replace(':', '_colon_')
   const SOURCE_FILE = path.resolve(CONTENT_ROOT, file.toLowerCase(), 'index.md')
   const TARGET_FILE = path.resolve(TRANSLATED_CONTENT_ROOT, file.toLowerCase(), 'index.md')
+
+  if (!fs.existsSync(TARGET_FILE)) {
+    notfound.add(slug)
+    continue
+  }
+
   const COMMAND = `git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`
   const { promise, resolve, reject } = Promise.withResolvers()
-  logs.add(promise)
+  outdated.add(promise)
   child_process.exec(COMMAND, { cwd: CONTENT_ROOT }, (err, sha) => {
     if (err != null) {
       console.trace(err)
@@ -48,6 +55,19 @@ for (const slug of tracking_files) {
   })
 }
 
-Promise.allSettled(Array.from(logs)).then((results) => {
-  fs.writeFileSync(LOG_FILE, JSON.stringify(results.filter(v => v.status === 'fulfilled').filter((v) => v.value != null).map(v => v.value), null, 2), 'utf-8')
+Promise.allSettled(Array.from(outdated)).then((outdated) => {
+  fs.writeFileSync(
+    LOG_FILE,
+    JSON.stringify(
+      {
+        outdated: outdated.filter(v => v.status === 'fulfilled')
+        .filter((v) => v.value != null)
+        .map(v => v.value),
+        notfound: Array.from(notfound),
+      },
+      null,
+      2,
+    ),
+    'utf-8',
+  )
 })
