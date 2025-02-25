@@ -119,10 +119,11 @@
       "::-webkit-progress-inner-value",
       "::cue-region",
       "::cue-region()",
-      "::details-content",
-      "an-plus-b"
+      "::details-content"
     ],
     "mismatch_mdn_url": [
+      "rect()",
+      "xywh()",
       "-webkit-line-clamp"
     ],
     "missing_mdn_content": [
