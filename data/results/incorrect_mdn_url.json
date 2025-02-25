@@ -122,8 +122,6 @@
       "::details-content"
     ],
     "mismatch_mdn_url": [
-      "rect()",
-      "xywh()",
       "-webkit-line-clamp"
     ],
     "missing_mdn_content": [

@@ -36,6 +36,7 @@
     "perspective()": "transform-function/perspective",
     "polygon()": "basic-shape/polygon",
     "radial-gradient()": "gradient/radial-gradient",
+    "rect()": "basic-shape/rect",
     "repeating-conic-gradient()": "gradient/repeating-conic-gradient",
     "repeating-linear-gradient()": "gradient/repeating-linear-gradient",
     "repeating-radial-gradient()": "gradient/repeating-radial-gradient",
@@ -62,7 +63,8 @@
     "translateX()": "transform-function/translateX",
     "translateY()": "transform-function/translateY",
     "translateZ()": "transform-function/translateZ",
-    "view()": "animation-timeline/view"
+    "view()": "animation-timeline/view",
+    "xywh()": "basic-shape/xywh"
   },
   "properties": {
     "-moz-appearance": "appearance",

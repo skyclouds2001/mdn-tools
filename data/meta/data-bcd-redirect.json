@@ -29,7 +29,9 @@
     "Next-sibling combinator": "next-sibling",
     "Subsequent-sibling combinator": "subsequent-sibling",
     "Child combinator": "child",
-    "Descendant combinator": "descendant"
+    "Descendant combinator": "descendant",
+    "Nesting selector": "nesting",
+    "Namespace separator": "namespace"
   },
   "types": {},
   "units": {}
