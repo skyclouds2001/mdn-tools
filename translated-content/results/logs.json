@@ -25,7 +25,6 @@
     "Web/CSS/:picture-in-picture"
   ],
   "notfound": [
-    "Web/API/NavigateEvent/NavigateEvent",
     "Web/API/NavigateEvent/canIntercept",
     "Web/API/NavigateEvent/destination",
     "Web/API/NavigateEvent/downloadRequest",

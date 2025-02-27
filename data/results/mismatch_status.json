@@ -6,5 +6,9 @@
   ":has-slotted": {
     "actual": "experimental",
     "expected": "standard"
+  },
+  "::details-content": {
+    "actual": "experimental",
+    "expected": "standard"
   }
 }
