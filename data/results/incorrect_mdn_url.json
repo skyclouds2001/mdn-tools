@@ -85,7 +85,6 @@
       "ime-mode",
       "initial-letter-align",
       "justify-tracks",
-      "line-clamp",
       "max-lines",
       "overflow-clip-box",
       "ruby-merge",
@@ -118,8 +117,7 @@
       "::-ms-value",
       "::-webkit-progress-inner-value",
       "::cue-region",
-      "::cue-region()",
-      "::details-content"
+      "::cue-region()"
     ],
     "mismatch_mdn_url": [
       "-webkit-line-clamp"

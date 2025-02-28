@@ -1,11 +1,15 @@
 {
+  "@font-face/font-stretch": {
+    "actual": "standard",
+    "expected": "obsolete"
+  },
+  "font-stretch": {
+    "actual": "standard",
+    "expected": "obsolete"
+  },
   ":active-view-transition-type()": {
     "actual": "standard",
     "expected": "experimental"
-  },
-  ":has-slotted": {
-    "actual": "experimental",
-    "expected": "standard"
   },
   "::details-content": {
     "actual": "experimental",
