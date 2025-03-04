@@ -25,11 +25,6 @@
     "Web/CSS/:picture-in-picture"
   ],
   "notfound": [
-    "Web/API/NavigateEvent/downloadRequest",
-    "Web/API/NavigateEvent/formData",
-    "Web/API/NavigateEvent/hashChange",
-    "Web/API/NavigateEvent/hasUAVisualTransition",
-    "Web/API/NavigateEvent/navigationType",
     "Web/API/NavigateEvent/intercept",
     "Web/API/NavigateEvent/scroll",
     "Web/API/Navigation/navigate",
@@ -38,8 +33,6 @@
     "Web/API/Navigation/navigate_event",
     "Web/API/Navigation/navigateerror_event",
     "Web/API/Navigation/navigatesuccess_event",
-    "Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent",
-    "Web/API/NavigationCurrentEntryChangeEvent/from",
     "Web/API/NavigationCurrentEntryChangeEvent/navigationType"
   ]
 }
