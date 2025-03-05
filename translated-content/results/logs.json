@@ -21,6 +21,17 @@
     "Web/API/FileReader/readAsDataURL",
     "Web/API/FileReader/progress_event",
     "Web/API/Broadcast_Channel_API",
+    "Web/API/CookieStore/delete",
+    "Web/API/CookieStore/get",
+    "Web/API/CookieStore/getAll",
+    "Web/API/CookieStore/set",
+    "Web/API/CookieChangeEvent/CookieChangeEvent",
+    "Web/API/CookieChangeEvent/changed",
+    "Web/API/CookieChangeEvent/deleted",
+    "Web/API/ExtendableCookieChangeEvent/changed",
+    "Web/API/ExtendableCookieChangeEvent/deleted",
+    "Web/API/Window/cookieStore",
+    "Web/API/ServiceWorkerGlobalScope/cookieStore",
     "Web/CSS/:fullscreen",
     "Web/CSS/:picture-in-picture"
   ],
@@ -33,6 +44,8 @@
     "Web/API/Navigation/navigate_event",
     "Web/API/Navigation/navigateerror_event",
     "Web/API/Navigation/navigatesuccess_event",
-    "Web/API/NavigationCurrentEntryChangeEvent/navigationType"
+    "Web/API/NavigationCurrentEntryChangeEvent/navigationType",
+    "Web/API/ExtendableCookieChangeEvent",
+    "Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent"
   ]
 }
