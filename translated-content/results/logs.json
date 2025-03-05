@@ -1,6 +1,5 @@
 {
   "outdated": [
-    "Web/API/NavigatorUAData/getHighEntropyValues",
     "Web/API/Web_Share_API",
     "Web/API/File_System_API",
     "Web/API/File_System_API/Origin_private_file_system",
@@ -36,7 +35,6 @@
     "Web/CSS/:picture-in-picture"
   ],
   "notfound": [
-    "Web/API/NavigateEvent/intercept",
     "Web/API/NavigateEvent/scroll",
     "Web/API/Navigation/navigate",
     "Web/API/Navigation/reload",
@@ -44,7 +42,6 @@
     "Web/API/Navigation/navigate_event",
     "Web/API/Navigation/navigateerror_event",
     "Web/API/Navigation/navigatesuccess_event",
-    "Web/API/NavigationCurrentEntryChangeEvent/navigationType",
     "Web/API/ExtendableCookieChangeEvent",
     "Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent"
   ]
