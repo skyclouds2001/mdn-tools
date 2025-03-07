@@ -36,7 +36,6 @@
     "Web/CSS/:picture-in-picture"
   ],
   "notfound": [
-    "Web/API/NavigateEvent/scroll",
     "Web/API/Navigation/navigate",
     "Web/API/Navigation/reload",
     "Web/API/Navigation/traverseTo",
