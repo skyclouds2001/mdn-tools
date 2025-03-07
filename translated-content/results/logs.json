@@ -1,5 +1,6 @@
 {
   "outdated": [
+    "Web",
     "Web/API/Web_Share_API",
     "Web/API/File_System_API",
     "Web/API/File_System_API/Origin_private_file_system",

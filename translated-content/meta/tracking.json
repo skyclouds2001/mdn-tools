@@ -1,5 +1,8 @@
 [
+  "Mozilla",
+  "Mozilla/Firefox",
   "Mozilla/Firefox/Releases",
+  "Web",
   "Web/API",
 
   "Web/API/Local_Font_Access_API",
