@@ -32,6 +32,19 @@
     "Web/API/ExtendableCookieChangeEvent/deleted",
     "Web/API/Window/cookieStore",
     "Web/API/ServiceWorkerGlobalScope/cookieStore",
+    "Web/API/View_Transition_API",
+    "Web/API/ViewTransition",
+    "Web/API/ViewTransition/finished",
+    "Web/API/ViewTransition/ready",
+    "Web/API/ViewTransition/updateCallbackDone",
+    "Web/API/ViewTransition/skipTransition",
+    "Web/API/Document/startViewTransition",
+    "Web/CSS/view-transition-name",
+    "Web/CSS/::view-transition",
+    "Web/CSS/::view-transition-group",
+    "Web/CSS/::view-transition-image-pair",
+    "Web/CSS/::view-transition-old",
+    "Web/CSS/::view-transition-new",
     "Web/CSS/:fullscreen",
     "Web/CSS/:picture-in-picture"
   ],
@@ -43,6 +56,9 @@
     "Web/API/Navigation/navigateerror_event",
     "Web/API/Navigation/navigatesuccess_event",
     "Web/API/ExtendableCookieChangeEvent",
-    "Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent"
+    "Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent",
+    "Web/CSS/CSS_view_transitions",
+    "Web/API/View_Transition_API/Using",
+    "Web/CSS/@view-transition"
   ]
 }
