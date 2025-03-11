@@ -30,8 +30,6 @@
     "Web/API/CookieChangeEvent/deleted",
     "Web/API/ExtendableCookieChangeEvent/changed",
     "Web/API/ExtendableCookieChangeEvent/deleted",
-    "Web/API/Window/cookieStore",
-    "Web/API/ServiceWorkerGlobalScope/cookieStore",
     "Web/API/View_Transition_API",
     "Web/API/ViewTransition",
     "Web/API/ViewTransition/finished",
@@ -49,12 +47,6 @@
     "Web/CSS/:picture-in-picture"
   ],
   "notfound": [
-    "Web/API/Navigation/navigate",
-    "Web/API/Navigation/reload",
-    "Web/API/Navigation/traverseTo",
-    "Web/API/Navigation/navigate_event",
-    "Web/API/Navigation/navigateerror_event",
-    "Web/API/Navigation/navigatesuccess_event",
     "Web/API/ExtendableCookieChangeEvent",
     "Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent",
     "Web/CSS/CSS_view_transitions",

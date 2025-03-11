@@ -98,8 +98,10 @@
       "text-box",
       "text-box-edge",
       "text-box-trim",
+      "view-transition-class",
       ":active-view-transition",
       ":active-view-transition-type()",
+      ":target-current",
       ":xr-overlay",
       "::-ms-browse",
       "::-ms-check",
@@ -117,7 +119,9 @@
       "::-ms-value",
       "::-webkit-progress-inner-value",
       "::cue-region",
-      "::cue-region()"
+      "::cue-region()",
+      "::scroll-marker",
+      "::scroll-marker-group"
     ],
     "mismatch_mdn_url": [
       "-webkit-line-clamp"
