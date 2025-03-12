@@ -1,6 +1,5 @@
 {
   "outdated": [
-    "Web",
     "Web/API/Web_Share_API",
     "Web/API/File_System_API",
     "Web/API/File_System_API/Origin_private_file_system",
@@ -25,11 +24,6 @@
     "Web/API/CookieStore/get",
     "Web/API/CookieStore/getAll",
     "Web/API/CookieStore/set",
-    "Web/API/CookieChangeEvent/CookieChangeEvent",
-    "Web/API/CookieChangeEvent/changed",
-    "Web/API/CookieChangeEvent/deleted",
-    "Web/API/ExtendableCookieChangeEvent/changed",
-    "Web/API/ExtendableCookieChangeEvent/deleted",
     "Web/API/View_Transition_API",
     "Web/API/ViewTransition",
     "Web/API/ViewTransition/finished",
@@ -47,8 +41,6 @@
     "Web/CSS/:picture-in-picture"
   ],
   "notfound": [
-    "Web/API/ExtendableCookieChangeEvent",
-    "Web/API/ExtendableCookieChangeEvent/ExtendableCookieChangeEvent",
     "Web/CSS/CSS_view_transitions",
     "Web/API/View_Transition_API/Using",
     "Web/CSS/@view-transition"
