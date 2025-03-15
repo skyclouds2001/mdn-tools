@@ -129,6 +129,7 @@
 
   "Web/API/File_System_API",
   "Web/API/File_System_API/Origin_private_file_system",
+  "Web/API/FileSystemChangeRecord",
   "Web/API/FileSystemDirectoryHandle",
   "Web/API/FileSystemDirectoryHandle/entries",
   "Web/API/FileSystemDirectoryHandle/getDirectoryHandle",
@@ -148,6 +149,10 @@
   "Web/API/FileSystemHandle/queryPermission",
   "Web/API/FileSystemHandle/remove",
   "Web/API/FileSystemHandle/requestPermission",
+  "Web/API/FileSystemObserver",
+  "Web/API/FileSystemObserver/FileSystemObserver",
+  "Web/API/FileSystemObserver/disconnect",
+  "Web/API/FileSystemObserver/observe",
   "Web/API/FileSystemSyncAccessHandle",
   "Web/API/FileSystemSyncAccessHandle/close",
   "Web/API/FileSystemSyncAccessHandle/flush",

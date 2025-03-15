@@ -66,6 +66,11 @@
   "notfound": [
     "Web/HTTP/Headers/Permissions-Policy/local-fonts",
     "Web/HTTP/Headers/Permissions-Policy/web-share",
+    "Web/API/FileSystemChangeRecord",
+    "Web/API/FileSystemObserver",
+    "Web/API/FileSystemObserver/FileSystemObserver",
+    "Web/API/FileSystemObserver/disconnect",
+    "Web/API/FileSystemObserver/observe",
     "Web/HTTP/Headers/Permissions-Policy/picture-in-picture",
     "Web/HTTP/Headers/Permissions-Policy/fullscreen",
     "Web/CSS/CSS_view_transitions",
