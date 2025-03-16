@@ -1,0 +1,40 @@
+name: Sync check status
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4.2.2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4.2.0
+      with:
+        node-version: 22
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run init script
+      run: npm run init
+
+    - name: Run sync script
+      run: npm run sync
+
+    - name: Run check script
+      run: npm run check
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout -b sync-check-status
+        git add -A
+        git commit -m 'Sync check status'
+        gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automate pr"
