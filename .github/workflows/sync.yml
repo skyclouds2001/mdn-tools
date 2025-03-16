@@ -15,6 +15,11 @@ jobs:
       with:
         submodules: 'recursive'
 
+    - name: Config git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
     - name: Set up Node.js
       uses: actions/setup-node@v4.2.0
       with:
@@ -41,4 +46,5 @@ jobs:
         git checkout -b sync-check-status
         git add -A
         git commit -m 'Sync check status'
+        git push origin sync-check-status
         gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automated pr"
