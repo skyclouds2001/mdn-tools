@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4.2.2
+      with:
+        submodules: 'recursive'
 
     - name: Set up Node.js
       uses: actions/setup-node@v4.2.0
@@ -21,8 +23,14 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run scripts
-      run: npm run init && npm run sync && npm run check
+    - name: Run init script
+      run: npm run init
+
+    - name: Run sync script
+      run: npm run sync
+
+    - name: Run check script
+      run: npm run check
 
     - name: Commit changes
       run: |
