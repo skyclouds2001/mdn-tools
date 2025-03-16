@@ -5,6 +5,10 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -38,7 +42,6 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git remote set-url origin https://skyclouds2001:$GH_TOKEN@github.com/${{ github.repository }}
         git checkout -b sync-check-status
         git add -A
         git commit -m 'Sync check status'
