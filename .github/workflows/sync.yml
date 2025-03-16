@@ -40,4 +40,5 @@ jobs:
         git add -A
         git commit -m 'Sync check status'
         git push origin sync-check-status
+        gh auth login --with-token ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automate pr"
