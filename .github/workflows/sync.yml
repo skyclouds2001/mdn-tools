@@ -21,14 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run init script
-      run: npm run init
-
-    - name: Run sync script
-      run: npm run sync
-
-    - name: Run check script
-      run: npm run check
+    - name: Run scripts
+      run: npm run init && npm run sync && npm run check
 
     - name: Commit changes
       run: |
@@ -37,4 +31,5 @@ jobs:
         git checkout -b sync-check-status
         git add -A
         git commit -m 'Sync check status'
+        git push origin sync-check-status
         gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automate pr"
