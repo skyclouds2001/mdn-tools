@@ -15,11 +15,6 @@ jobs:
       with:
         submodules: 'recursive'
 
-    - name: Config git
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
     - name: Set up Node.js
       uses: actions/setup-node@v4.2.0
       with:
@@ -43,6 +38,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git remote set-url origin https://skyclouds2001:$GH_TOKEN@github.com/${{ github.repository }}
         git checkout -b sync-check-status
         git add -A
         git commit -m 'Sync check status'
