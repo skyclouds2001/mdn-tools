@@ -46,4 +46,9 @@ jobs:
         git add -A
         git commit -m 'Sync check status'
         git push origin sync-check-status --force
-        gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automated pr" --assignee skyclouds2001 --reviewer skyclouds2001
+        existing_pr=$(gh pr list --base master --head sync-check-status --json number --jq '.[0].number')
+        if [ -z "$existing_pr" ]; then
+          gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automated pr" --assignee skyclouds2001 --reviewer skyclouds2001
+        else
+          echo "A pull request from sync-check-status to master already exists: #$existing_pr"
+        fi
