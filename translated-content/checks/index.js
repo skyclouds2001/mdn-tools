@@ -10,10 +10,10 @@ const root = process.cwd()
 
 process.loadEnvFile(path.resolve(root, '.env'))
 
-const CONTENT_ROOT = path.normalize(path.resolve(root, process.env.CONTENT_ROOT, 'files', 'en-us'))
+const CONTENT_ROOT = path.normalize(path.resolve(root, process.env.CONTENT_ROOT))
 console.log(CONTENT_ROOT)
 
-const TRANSLATED_CONTENT_ROOT = path.normalize(path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT, 'files', 'zh-cn'))
+const TRANSLATED_CONTENT_ROOT = path.normalize(path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT))
 console.log(TRANSLATED_CONTENT_ROOT)
 
 const LOG_FILE = path.normalize(path.resolve(root, 'translated-content', 'results', 'logs.json'))
@@ -26,8 +26,9 @@ for (const slug of tracking_files) {
   const file = slug
     .replace('::', '_doublecolon_')
     .replace(':', '_colon_')
-  const SOURCE_FILE = path.normalize(path.resolve(CONTENT_ROOT, file.toLowerCase(), 'index.md'))
-  const TARGET_FILE = path.normalize(path.resolve(TRANSLATED_CONTENT_ROOT, file.toLowerCase(), 'index.md'))
+    .toLowerCase()
+  const SOURCE_FILE = path.normalize(path.resolve(CONTENT_ROOT, 'files', 'en-us', file, 'index.md'))
+  const TARGET_FILE = path.normalize(path.resolve(TRANSLATED_CONTENT_ROOT, 'files', 'zh-cn', file, 'index.md'))
   console.log(SOURCE_FILE, TARGET_FILE)
 
   if (!fs.existsSync(TARGET_FILE)) {
