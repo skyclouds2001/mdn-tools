@@ -10,11 +10,11 @@ const root = process.cwd()
 
 process.loadEnvFile(path.resolve(root, '.env'))
 
-const CONTENT_ROOT = path.resolve(root, process.env.CONTENT_ROOT, 'files/en-us')
+const CONTENT_ROOT = path.resolve(root, process.env.CONTENT_ROOT, 'files', 'en-us')
 
-const TRANSLATED_CONTENT_ROOT = path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT, 'files/zh-cn')
+const TRANSLATED_CONTENT_ROOT = path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT, 'files', 'zh-cn')
 
-const LOG_FILE = path.resolve(root, 'translated-content/results/logs.json')
+const LOG_FILE = path.normalize(path.resolve(root, 'translated-content', 'results', 'logs.json'))
 
 const notfound = new Set()
 const outdated = new Set()
@@ -23,8 +23,8 @@ for (const slug of tracking_files) {
   const file = slug
     .replace('::', '_doublecolon_')
     .replace(':', '_colon_')
-  const SOURCE_FILE = path.resolve(CONTENT_ROOT, file.toLowerCase(), 'index.md')
-  const TARGET_FILE = path.resolve(TRANSLATED_CONTENT_ROOT, file.toLowerCase(), 'index.md')
+  const SOURCE_FILE = path.normalize(path.resolve(CONTENT_ROOT, file.toLowerCase(), 'index.md'))
+  const TARGET_FILE = path.normalize(path.resolve(TRANSLATED_CONTENT_ROOT, file.toLowerCase(), 'index.md'))
 
   if (!fs.existsSync(TARGET_FILE)) {
     notfound.add(slug)
