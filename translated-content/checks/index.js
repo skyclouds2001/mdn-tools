@@ -10,9 +10,9 @@ const root = process.cwd()
 
 process.loadEnvFile(path.resolve(root, '.env'))
 
-const CONTENT_ROOT = path.resolve(root, process.env.CONTENT_ROOT, 'files', 'en-us')
+const CONTENT_ROOT = path.normalize(path.resolve(root, process.env.CONTENT_ROOT, 'files', 'en-us'))
 
-const TRANSLATED_CONTENT_ROOT = path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT, 'files', 'zh-cn')
+const TRANSLATED_CONTENT_ROOT = path.normalize(path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT, 'files', 'zh-cn'))
 
 const LOG_FILE = path.normalize(path.resolve(root, 'translated-content', 'results', 'logs.json'))
 
@@ -32,10 +32,9 @@ for (const slug of tracking_files) {
     continue
   }
 
-  const COMMAND = `git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`
   const { promise, resolve, reject } = Promise.withResolvers()
   outdated.add(promise)
-  child_process.exec(COMMAND, { cwd: CONTENT_ROOT }, (err, sha) => {
+  child_process.exec(`git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`, { cwd: CONTENT_ROOT }, (err, sha) => {
     if (err != null) {
       console.trace(err)
       reject(err)
