@@ -47,7 +47,7 @@ for (const slug of tracking_files) {
       }
       const data = fm(content)
       const sourceCommit = data.attributes.l10n?.sourceCommit
-      console.log({ sha, sourceCommit })
+      console.log({ sha: sha.trim(), sourceCommit: sourceCommit?.trim(), result: sourceCommit?.trim() !== sha.trim() })
       if (sourceCommit == null || sourceCommit.trim() !== sha.trim()) {
         resolve(slug)
       } else {
