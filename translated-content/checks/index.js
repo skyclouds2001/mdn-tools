@@ -11,10 +11,13 @@ const root = process.cwd()
 process.loadEnvFile(path.resolve(root, '.env'))
 
 const CONTENT_ROOT = path.normalize(path.resolve(root, process.env.CONTENT_ROOT, 'files', 'en-us'))
+console.log(CONTENT_ROOT)
 
 const TRANSLATED_CONTENT_ROOT = path.normalize(path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT, 'files', 'zh-cn'))
+console.log(TRANSLATED_CONTENT_ROOT)
 
 const LOG_FILE = path.normalize(path.resolve(root, 'translated-content', 'results', 'logs.json'))
+console.log(LOG_FILE)
 
 const notfound = new Set()
 const outdated = new Set()
@@ -34,7 +37,7 @@ for (const slug of tracking_files) {
 
   const { promise, resolve, reject } = Promise.withResolvers()
   outdated.add(promise)
-  child_process.exec(`git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`, { cwd: CONTENT_ROOT }, (err, sha) => {
+  child_process.exec(`git rev-list --max-count=1 HEAD -- ${SOURCE_FILE}`, { cwd: CONTENT_ROOT, encoding: 'utf-8' }, (err, sha) => {
     if (err != null) {
       console.trace(err)
       reject(err)
