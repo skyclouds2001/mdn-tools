@@ -11,13 +11,10 @@ const root = process.cwd()
 process.loadEnvFile(path.resolve(root, '.env'))
 
 const CONTENT_ROOT = path.normalize(path.resolve(root, process.env.CONTENT_ROOT))
-console.log(CONTENT_ROOT)
 
 const TRANSLATED_CONTENT_ROOT = path.normalize(path.resolve(root, process.env.TRANSLATED_CONTENT_ROOT))
-console.log(TRANSLATED_CONTENT_ROOT)
 
 const LOG_FILE = path.normalize(path.resolve(root, 'translated-content', 'results', 'logs.json'))
-console.log(LOG_FILE)
 
 const notfound = new Set()
 const outdated = new Set()
@@ -29,7 +26,6 @@ for (const slug of tracking_files) {
     .toLowerCase()
   const SOURCE_FILE = path.normalize(path.resolve(CONTENT_ROOT, 'files', 'en-us', file, 'index.md'))
   const TARGET_FILE = path.normalize(path.resolve(TRANSLATED_CONTENT_ROOT, 'files', 'zh-cn', file, 'index.md'))
-  console.log(SOURCE_FILE, TARGET_FILE)
 
   if (!fs.existsSync(TARGET_FILE)) {
     notfound.add(slug)
@@ -50,7 +46,6 @@ for (const slug of tracking_files) {
       }
       const data = fm(content)
       const sourceCommit = data.attributes.l10n?.sourceCommit
-      console.log(sha, sourceCommit)
       if (sourceCommit == null || sourceCommit.trim() !== sha.trim()) {
         resolve(slug)
       } else {
