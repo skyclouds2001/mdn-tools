@@ -46,4 +46,4 @@ jobs:
         git add -A
         git commit -m 'Sync check status'
         git push origin sync-check-status --force
-        gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automated pr"
+        gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automated pr" --assignee skyclouds2001 --reviewer skyclouds2001
