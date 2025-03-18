@@ -9,8 +9,6 @@ child_process.execSync('npm ci', {
   cwd: root,
 })
 
-if (!fs.existsSync(path.resolve(root, '@mdn/data')) || !fs.existsSync(path.resolve(root, '@mdn/browser-compat-data')) || !fs.existsSync(path.resolve(root, '@mdn/content'))) {
-  child_process.execSync('git submodule init', {
-    cwd: root,
-  })
-}
+child_process.execSync('git submodule init', {
+  cwd: root,
+})
