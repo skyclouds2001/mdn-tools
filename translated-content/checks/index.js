@@ -25,7 +25,7 @@ for (const slug of tracking_files) {
     .replace(':', '_colon_')
   const SOURCE_FILE = path.normalize(path.resolve(CONTENT_ROOT, file.toLowerCase(), 'index.md'))
   const TARGET_FILE = path.normalize(path.resolve(TRANSLATED_CONTENT_ROOT, file.toLowerCase(), 'index.md'))
-  console.log({ SOURCE_FILE, TARGET_FILE })
+  console.log(SOURCE_FILE, TARGET_FILE)
 
   if (!fs.existsSync(TARGET_FILE)) {
     notfound.add(slug)
@@ -47,7 +47,7 @@ for (const slug of tracking_files) {
       }
       const data = fm(content)
       const sourceCommit = data.attributes.l10n?.sourceCommit
-      console.log({ sha: sha.trim(), sourceCommit: sourceCommit?.trim(), result: sourceCommit?.trim() !== sha.trim() })
+      console.log(sha, sourceCommit)
       if (sourceCommit == null || sourceCommit.trim() !== sha.trim()) {
         resolve(slug)
       } else {
