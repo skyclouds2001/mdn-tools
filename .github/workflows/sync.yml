@@ -45,5 +45,5 @@ jobs:
         git checkout -b sync-check-status
         git add -A
         git commit -m 'Sync check status'
-        git push origin sync-check-status
+        git push origin sync-check-status --force
         gh pr create --base master --head sync-check-status --title "Sync check status" --body "Sync check status" --draft --label "automated pr"
