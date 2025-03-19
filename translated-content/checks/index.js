@@ -16,6 +16,9 @@ const TRANSLATED_CONTENT_ROOT = path.normalize(path.resolve(root, process.env.TR
 
 const LOG_FILE = path.normalize(path.resolve(root, 'translated-content', 'results', 'logs.json'))
 
+console.log(fs.readdirSync(process.env.CONTENT_ROOT))
+console.log(fs.readdirSync(process.env.TRANSLATED_CONTENT_ROOT))
+
 const notfound = new Set()
 const outdated = new Set()
 
