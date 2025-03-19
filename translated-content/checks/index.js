@@ -34,7 +34,7 @@ for (const slug of tracking_files) {
 
   const { promise, resolve, reject } = Promise.withResolvers()
   outdated.add(promise)
-  child_process.exec(`git rev-list --max-count=1 HEAD -- "${SOURCE_FILE}"`, { cwd: CONTENT_ROOT, encoding: 'utf-8' }, (err, sha) => {
+  child_process.exec(`git log -n 1 --pretty=format:%H -- "${SOURCE_FILE}"`, { cwd: CONTENT_ROOT, encoding: 'utf-8' }, (err, sha) => {
     if (err != null) {
       console.trace(err)
       reject(err)
