@@ -24,6 +24,8 @@
     "Web/API/HTMLVideoElement/requestPictureInPicture",
     "Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture",
     "Web/API/Fullscreen_API",
+    "Web/API/Fullscreen_API/Guide",
+    "Web/API/Document/fullscreenElement",
     "Web/API/Element/requestFullscreen",
     "Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen",
     "Web/API/Keyboard/getLayoutMap",
