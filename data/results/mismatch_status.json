@@ -7,10 +7,6 @@
     "actual": "standard",
     "expected": "obsolete"
   },
-  ":active-view-transition-type()": {
-    "actual": "standard",
-    "expected": "experimental"
-  },
   "::details-content": {
     "actual": "experimental",
     "expected": "standard"

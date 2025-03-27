@@ -1,10 +1,12 @@
 {
   "outdated": [
+    "Web/API/Navigator/userAgentData",
     "Web/API/Web_Share_API",
     "Web/API/DataTransferItem/getAsFileSystemHandle",
     "Web/API/Window/showDirectoryPicker",
     "Web/API/Window/showOpenFilePicker",
     "Web/API/Window/showSaveFilePicker",
+    "Web/API/File_API/Using_files_from_web_applications",
     "Web/API/Broadcast_Channel_API",
     "Web/API/Fullscreen_API/Guide",
     "Web/API/Document/fullscreenElement",
@@ -36,7 +38,6 @@
     "Web/API/FileSystemObserver/disconnect",
     "Web/API/FileSystemObserver/observe",
     "Web/CSS/CSS_view_transitions",
-    "Web/API/View_Transition_API/Using",
-    "Web/CSS/@view-transition"
+    "Web/API/View_Transition_API/Using"
   ]
 }
