@@ -8,8 +8,6 @@
     "Web/API/Window/showSaveFilePicker",
     "Web/API/File_API/Using_files_from_web_applications",
     "Web/API/Broadcast_Channel_API",
-    "Web/API/Fullscreen_API/Guide",
-    "Web/API/Document/fullscreenElement",
     "Web/API/CookieStore",
     "Web/API/CookieStore/delete",
     "Web/API/CookieStore/get",
