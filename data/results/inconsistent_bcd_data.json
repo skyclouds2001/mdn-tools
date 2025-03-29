@@ -240,7 +240,6 @@
       "::column",
       "Namespace selector (|)",
       "Nesting selector (&amp;)",
-      ":open",
       "::picker()",
       "::picker-icon",
       "::scroll-button()",

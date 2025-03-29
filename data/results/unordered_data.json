@@ -1,7 +1,5 @@
 {
   "unordered_data": {
-    "integer": "image",
-    "ndashdigit-ident": "name-repeat",
-    "relative-size": "rect()"
+    "generic-complete": "general-enclosed"
   }
 }

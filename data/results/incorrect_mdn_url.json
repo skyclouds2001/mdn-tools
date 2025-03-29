@@ -127,7 +127,33 @@
       "-webkit-line-clamp"
     ],
     "missing_mdn_content": [
-      "-webkit-line-clamp"
+      "rotateX()",
+      "rotateY()",
+      "rotateZ()",
+      "scaleX()",
+      "scaleY()",
+      "scaleZ()",
+      "skewX()",
+      "skewY()",
+      "translateX()",
+      "translateY()",
+      "translateZ()",
+      "-webkit-line-clamp",
+      "Type selectors",
+      "Class selectors",
+      "ID selectors",
+      "Universal selectors",
+      "Attribute selectors",
+      "Nesting selector",
+      "Selector list",
+      "Next-sibling combinator",
+      "Subsequent-sibling combinator",
+      "Child combinator",
+      "Descendant combinator",
+      "Column combinator",
+      "Namespace separator",
+      "Pseudo-classes",
+      "Pseudo-elements"
     ]
   }
 }
