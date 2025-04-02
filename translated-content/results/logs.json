@@ -3,9 +3,6 @@
     "Web/API/Navigator/userAgentData",
     "Web/API/Web_Share_API",
     "Web/API/DataTransferItem/getAsFileSystemHandle",
-    "Web/API/Window/showDirectoryPicker",
-    "Web/API/Window/showOpenFilePicker",
-    "Web/API/Window/showSaveFilePicker",
     "Web/API/File_API/Using_files_from_web_applications",
     "Web/API/Broadcast_Channel_API",
     "Web/API/CookieStore",
@@ -13,7 +10,6 @@
     "Web/API/CookieStore/get",
     "Web/API/CookieStore/getAll",
     "Web/API/CookieStore/set",
-    "Web/API/View_Transition_API",
     "Web/API/ViewTransition",
     "Web/API/ViewTransition/finished",
     "Web/API/ViewTransition/ready",
@@ -35,7 +31,6 @@
     "Web/API/FileSystemObserver/FileSystemObserver",
     "Web/API/FileSystemObserver/disconnect",
     "Web/API/FileSystemObserver/observe",
-    "Web/CSS/CSS_view_transitions",
-    "Web/API/View_Transition_API/Using"
+    "Web/CSS/CSS_view_transitions"
   ]
 }

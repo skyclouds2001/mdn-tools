@@ -124,6 +124,9 @@
       "::scroll-marker-group"
     ],
     "mismatch_mdn_url": [
+      "cubic-bezier()",
+      "linear()",
+      "steps()",
       "-webkit-line-clamp"
     ],
     "missing_mdn_content": [

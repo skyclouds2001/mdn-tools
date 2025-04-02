@@ -1,7 +1,8 @@
 {
   "unordered_data": {
-    "integer": "image",
-    "ndashdigit-ident": "name-repeat",
-    "relative-size": "rect()"
+    "@counter-style": "@container",
+    "generic-complete": "general-enclosed",
+    "scroller": "scroll-state-feature",
+    "step-position": "step-easing-function"
   }
 }

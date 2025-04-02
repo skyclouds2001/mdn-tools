@@ -104,6 +104,7 @@
       "inlineAxisHorizontalInXUL",
       "inlineBoxesAndBlockContainers",
       "inlineLevelAndTableCellElements",
+      "inlineLevelBoxesFlexItemsGridItemsTableCellsAndSVGTextContentElements",
       "inlineSizeOfContainingBlock",
       "integer",
       "interactive",
