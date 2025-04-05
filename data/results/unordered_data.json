@@ -3,6 +3,7 @@
     "@counter-style": "@container",
     "generic-complete": "general-enclosed",
     "scroller": "scroll-state-feature",
-    "step-position": "step-easing-function"
+    "step-position": "step-easing-function",
+    "referTtoTheUsedValueOfLineHeight": "referToTotalPathLength"
   }
 }
