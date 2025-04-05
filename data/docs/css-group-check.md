@@ -1,5 +1,5 @@
-- [-] Basic Selectors
-- [-] Combinators
+- [x] Basic Selectors
+- [x] Combinators
 - [x] Compositing and Blending
 - [x] CSS Angles
 - [x] CSS Animations
@@ -59,9 +59,9 @@
 - [x] CSS Times
 - [x] CSS Transforms
 - [x] CSS Transitions
-- [-] CSS Types
+- [x] CSS Types
 - [x] CSS Units
-- [~] CSS Values and Units
+- [x] CSS Values and Units
 - [x] CSS Variables
 - [x] CSS View Transitions
 - [x] CSS Viewport
@@ -69,16 +69,16 @@
 - [x] CSS Writing Modes
 - [x] CSSOM View
 - [x] Filter Effects
-- [-] Grouping Selectors
+- [x] Grouping Selectors
 - [x] MathML
 - [x] Media Queries
 - [-] Microsoft Extensions
 - [x] Motion Path
 - [-] Mozilla Extensions
 - [x] Pointer Events
-- [-] Pseudo
-- [-] Pseudo-classes
-- [-] Pseudo-elements
-- [-] Selectors
+- [x] Pseudo
+- [x] Pseudo-classes
+- [x] Pseudo-elements
+- [x] Selectors
 - [-] Scalable Vector Graphics
 - [-] WebKit Extensions
