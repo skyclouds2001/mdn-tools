@@ -1,14 +1,6 @@
 {
-  "@font-face/font-stretch": {
+  "::picker()": {
     "actual": "standard",
-    "expected": "obsolete"
-  },
-  "font-stretch": {
-    "actual": "standard",
-    "expected": "obsolete"
-  },
-  "::details-content": {
-    "actual": "experimental",
-    "expected": "standard"
+    "expected": "experimental"
   }
 }
