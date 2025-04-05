@@ -2,8 +2,6 @@
   "inconsistent_function": {
     "not_in_syntax": [],
     "not_in_function": [],
-    "mismatch_syntax_between_function_and_syntax": [
-      "linear-gradient()"
-    ]
+    "mismatch_syntax_between_function_and_syntax": []
   }
 }

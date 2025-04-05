@@ -86,8 +86,10 @@
       "initial-letter-align",
       "justify-tracks",
       "max-lines",
+      "object-view-box",
       "overflow-clip-box",
       "ruby-merge",
+      "scroll-initial-target",
       "scroll-snap-coordinate",
       "scroll-snap-destination",
       "scroll-snap-points-x",
@@ -130,7 +132,33 @@
       "-webkit-line-clamp"
     ],
     "missing_mdn_content": [
-      "-webkit-line-clamp"
+      "rotateX()",
+      "rotateY()",
+      "rotateZ()",
+      "scaleX()",
+      "scaleY()",
+      "scaleZ()",
+      "skewX()",
+      "skewY()",
+      "translateX()",
+      "translateY()",
+      "translateZ()",
+      "-webkit-line-clamp",
+      "Type selectors",
+      "Class selectors",
+      "ID selectors",
+      "Universal selectors",
+      "Attribute selectors",
+      "Nesting selector",
+      "Selector list",
+      "Next-sibling combinator",
+      "Subsequent-sibling combinator",
+      "Child combinator",
+      "Descendant combinator",
+      "Column combinator",
+      "Namespace separator",
+      "Pseudo-classes",
+      "Pseudo-elements"
     ]
   }
 }
