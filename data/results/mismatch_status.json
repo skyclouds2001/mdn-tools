@@ -1,4 +1,12 @@
 {
+  "::checkmark": {
+    "actual": "standard",
+    "expected": "experimental"
+  },
+  "::picker-icon": {
+    "actual": "standard",
+    "expected": "experimental"
+  },
   "::picker()": {
     "actual": "standard",
     "expected": "experimental"

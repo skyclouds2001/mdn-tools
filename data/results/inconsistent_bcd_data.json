@@ -233,17 +233,14 @@
       "::-webkit-scrollbar-track-piece",
       "::-webkit-search-cancel-button",
       "::-webkit-search-results-button",
-      "::checkmark",
       ":closed",
       "::column",
       "Namespace selector (|)",
       "Nesting selector (&amp;)",
-      "::picker-icon",
       "::scroll-button()",
       "-moz-image-rect",
       "calc-keyword",
-      "global_keywords",
-      "text-edge"
+      "global_keywords"
     ]
   }
 }

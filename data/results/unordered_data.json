@@ -1,6 +1,7 @@
 {
   "unordered_data": {
     "@counter-style": "@container",
+    "::picker-icon": "::picker()",
     "generic-complete": "general-enclosed",
     "scroller": "scroll-state-feature",
     "step-position": "step-easing-function",
