@@ -4,7 +4,6 @@
     "::picker-icon": "::picker()",
     "generic-complete": "general-enclosed",
     "scroller": "scroll-state-feature",
-    "step-position": "step-easing-function",
-    "referTtoTheUsedValueOfLineHeight": "referToTotalPathLength"
+    "step-position": "step-easing-function"
   }
 }
