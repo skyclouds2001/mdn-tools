@@ -75,6 +75,7 @@
     "Web/API/VirtualKeyboard/show",
     "Web/API/VirtualKeyboard/geometrychange_event",
     "Web/API/HTMLElement/virtualKeyboardPolicy",
+    "Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy",
     "Web/API/Navigation_API",
     "Web/API/NavigateEvent",
     "Web/API/NavigateEvent/NavigateEvent",
@@ -136,7 +137,6 @@
     "Web/API/FileSystemObserver",
     "Web/API/FileSystemObserver/FileSystemObserver",
     "Web/API/FileSystemObserver/disconnect",
-    "Web/API/FileSystemObserver/observe",
-    "Web/HTML/Global_attributes/virtualkeyboardpolicy"
+    "Web/API/FileSystemObserver/observe"
   ]
 }

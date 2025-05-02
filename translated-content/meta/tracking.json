@@ -313,7 +313,7 @@
   "Web/API/VirtualKeyboard/geometrychange_event",
   "Web/API/HTMLElement/virtualKeyboardPolicy",
   "Web/API/Navigator/virtualKeyboard",
-  "Web/HTML/Global_attributes/virtualkeyboardpolicy",
+  "Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy",
 
   "Web/API/Navigation_API",
   "Web/API/NavigateEvent",
