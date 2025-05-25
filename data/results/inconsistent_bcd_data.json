@@ -93,6 +93,7 @@
       "image-resolution",
       "initial-letter-align",
       "justify-tracks",
+      "line-height-step",
       "mask-border-mode",
       "masonry-auto-flow",
       "max-lines",
@@ -200,6 +201,7 @@
       "glyph-orientation-vertical",
       "interactivity",
       "reading-flow",
+      "reading-order",
       "scroll-marker-group",
       "speak",
       "text-autospace",
@@ -237,7 +239,8 @@
       "::scroll-button()",
       "-moz-image-rect",
       "calc-keyword",
-      "global_keywords"
+      "global_keywords",
+      "if"
     ]
   }
 }

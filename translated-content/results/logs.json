@@ -1,6 +1,7 @@
 {
   "outdated": [
     "Mozilla/Firefox",
+    "Web/HTTP/Reference/Headers/Permissions-Policy/local-fonts",
     "Web/API/Web_Locks_API",
     "Web/API/Notifications_API/Using_the_Notifications_API",
     "Web/API/Notification",
@@ -16,6 +17,7 @@
     "Web/API/NetworkInformation/change_event",
     "Web/API/Navigator/userAgentData",
     "Web/API/Web_Share_API",
+    "Web/HTTP/Reference/Headers/Permissions-Policy/web-share",
     "Web/API/Permissions/revoke",
     "Web/API/PermissionStatus/change_event",
     "Web/API/File_System_API/Origin_private_file_system",
@@ -29,6 +31,7 @@
     "Web/API/Blob",
     "Web/API/Blob/slice",
     "Web/API/FileReader/result",
+    "Web/API/FileReader/readAsDataURL",
     "Web/API/FileReader/abort_event",
     "Web/API/FileReader/error_event",
     "Web/API/FileReader/load_event",
@@ -48,6 +51,7 @@
     "Web/API/PictureInPictureWindow/resize_event",
     "Web/API/HTMLVideoElement/enterpictureinpicture_event",
     "Web/API/HTMLVideoElement/leavepictureinpicture_event",
+    "Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture",
     "Web/API/Document_Picture-in-Picture_API/Using",
     "Web/API/DocumentPictureInPicture",
     "Web/API/DocumentPictureInPicture/window",
@@ -65,6 +69,7 @@
     "Web/API/Element/fullscreenchange_event",
     "Web/API/Element/fullscreenerror_event",
     "Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen",
+    "Web/API/Pointer_Lock_API",
     "Web/API/Element/requestPointerLock",
     "Web/API/Document/pointerlockchange_event",
     "Web/API/Document/pointerlockerror_event",
@@ -123,7 +128,6 @@
     "Web/API/ViewTransition/updateCallbackDone",
     "Web/API/ViewTransition/skipTransition",
     "Web/API/Document/startViewTransition",
-    "Web/CSS/view-transition-name",
     "Web/CSS/::view-transition",
     "Web/CSS/::view-transition-group",
     "Web/CSS/::view-transition-image-pair",
@@ -132,11 +136,5 @@
     "Web/CSS/:fullscreen",
     "Web/CSS/:picture-in-picture"
   ],
-  "notfound": [
-    "Web/API/FileSystemChangeRecord",
-    "Web/API/FileSystemObserver",
-    "Web/API/FileSystemObserver/FileSystemObserver",
-    "Web/API/FileSystemObserver/disconnect",
-    "Web/API/FileSystemObserver/observe"
-  ]
+  "notfound": []
 }
