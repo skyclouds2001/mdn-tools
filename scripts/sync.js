@@ -1,5 +1,4 @@
 import child_process from 'node:child_process'
-import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 
@@ -13,11 +12,11 @@ child_process.execSync('git submodule update --recursive --remote', {
   cwd: root,
 })
 
-child_process.execSync('npm ci', {
+child_process.execSync('npm ci --ignore-scripts', {
   cwd: path.resolve(root, '@mdn/data'),
 })
 
-child_process.execSync('npm ci', {
+child_process.execSync('npm ci --ignore-scripts', {
   cwd: path.resolve(root, '@mdn/browser-compat-data'),
 })
 
@@ -25,10 +24,10 @@ child_process.execSync('npm run build', {
   cwd: path.resolve(root, '@mdn/browser-compat-data'),
 })
 
-child_process.execSync('yarn', {
+child_process.execSync('yarn --ignore-scripts', {
   cwd: path.resolve(root, '@mdn/translated-content'),
 })
 
-child_process.execSync('yarn', {
+child_process.execSync('yarn --ignore-scripts', {
   cwd: path.resolve(root, '@mdn/content'),
 })
