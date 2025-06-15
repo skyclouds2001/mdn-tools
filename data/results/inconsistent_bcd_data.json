@@ -240,7 +240,9 @@
       "-moz-image-rect",
       "calc-keyword",
       "global_keywords",
-      "if"
+      "if",
+      "sibling-count",
+      "sibling-index"
     ]
   }
 }
